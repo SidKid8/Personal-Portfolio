@@ -23,12 +23,10 @@ body{
 #header .wrapper{
     display: inline-flex;
     width: max-content;
-	font-family: sans-serif;
 	font-weight: 550;
 	color: #ffffff;
 	overflow: hidden;
 	height: 60px;
-    background-color: red;
 }
 #header .word-wrap li{
     list-style-type: none;
