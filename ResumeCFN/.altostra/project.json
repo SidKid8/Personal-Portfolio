@@ -1,0 +1,264 @@
+{
+	"id": "ResumeCFN",
+	"name": "ResumeCFN",
+	"type": "altostra",
+	"description": "A simple CRUD service template",
+	"created": "2022-11-09T03:10:59.752Z",
+	"blueprints": [
+		{
+			"connections": {
+				"Data01": {},
+				"Cdn01": {
+					"WilsonwilsonWorld02": {
+						"type": "connection.dependency.cdn-storage",
+						"bucketRoot": "",
+						"route": "",
+						"from": "Cdn01",
+						"to": "WilsonwilsonWorld02"
+					},
+					"WilsonwilsonWorld01": {
+						"type": "connection.dependency.cdn-storage",
+						"bucketRoot": "",
+						"route": "",
+						"from": "Cdn01",
+						"to": "WilsonwilsonWorld01"
+					}
+				},
+				"WilsonwilsonWorld02": {
+					"InvrementViewCounter01": {
+						"type": "connection.file-store.trigger",
+						"eventsFilter": [
+							"create-or-update"
+						],
+						"from": "WilsonwilsonWorld02",
+						"to": "InvrementViewCounter01"
+					}
+				},
+				"WilsonwilsonWorld01": {
+					"InvrementViewCounter01": {
+						"type": "connection.file-store.trigger",
+						"eventsFilter": [
+							"create-or-update"
+						],
+						"from": "WilsonwilsonWorld01",
+						"to": "InvrementViewCounter01"
+					}
+				},
+				"InvrementViewCounter01": {
+					"WilsonwilsonWorld01": {
+						"type": "connection.resource-access",
+						"accessLevel": "read-only",
+						"from": "InvrementViewCounter01",
+						"to": "WilsonwilsonWorld01"
+					},
+					"WilsonwilsonWorld02": {
+						"type": "connection.resource-access",
+						"accessLevel": "read-only",
+						"from": "InvrementViewCounter01",
+						"to": "WilsonwilsonWorld02"
+					}
+				},
+				"Table01": {
+					"InvrementViewCounter01": {
+						"type": "connection.trigger",
+						"from": "Table01",
+						"to": "InvrementViewCounter01"
+					}
+				},
+				"ApiEndpoint06": {
+					"InvrementViewCounter01": {
+						"type": "connection.trigger",
+						"from": "ApiEndpoint06",
+						"to": "InvrementViewCounter01"
+					}
+				},
+				"Domain01": {
+					"Cdn01": {
+						"type": "connection.domain",
+						"from": "Domain01",
+						"to": "Cdn01",
+						"hostname": "*",
+						"certificate": {
+							"type": "cert.stored",
+							"uri": "arn:aws:acm:us-east-1:431875792165:certificate/67e54f3c-1621-4cc4-9490-ffad21d7cc0a"
+						}
+					}
+				}
+			},
+			"id": "ResumeCFN",
+			"metadata": {
+				"designer": {
+					"resourcePositions": {
+						"WilsonwilsonWorld01": {
+							"x": 457,
+							"y": 25.25,
+							"z": 0
+						},
+						"WilsonwilsonWorld02": {
+							"x": 403,
+							"y": 339.25,
+							"z": 0
+						},
+						"Cdn01": {
+							"x": 707,
+							"y": 231.25,
+							"z": 0
+						},
+						"InvrementViewCounter01": {
+							"x": 203,
+							"y": 186.25,
+							"z": 0
+						},
+						"Table01": {
+							"x": 4,
+							"y": 329.25,
+							"z": 0
+						},
+						"ApiGateway01": {
+							"x": -35,
+							"y": 50.25,
+							"z": 0
+						},
+						"Domain01": {
+							"x": 733,
+							"y": -4.75,
+							"z": 0
+						}
+					}
+				}
+			},
+			"name": "ResumeCFN",
+			"resources": {
+				"WilsonwilsonWorld01": {
+					"type": "resource.external",
+					"name": "wilsonwilson.world",
+					"externalResourceType": "resource.file-store",
+					"identifier": "https://bucket-name.s3.us-west-1.amazonaws.com",
+					"id": "WilsonwilsonWorld01"
+				},
+				"WilsonwilsonWorld02": {
+					"type": "resource.external",
+					"name": "www.wilsonwilson.world",
+					"externalResourceType": "resource.file-store",
+					"identifier": "https://bucket-name.s3.us-west-1.amazonaws.com",
+					"id": "WilsonwilsonWorld02"
+				},
+				"Cdn01": {
+					"type": "resource.cdn",
+					"name": "Portfolio CDN",
+					"defaultRoot": "index.html",
+					"isSPA": false,
+					"tls": {
+						"useTLS": true,
+						"httpRedirection": true
+					},
+					"id": "Cdn01"
+				},
+				"InvrementViewCounter01": {
+					"type": "resource.compute.function",
+					"name": "IncrementViewCounter",
+					"memory": 128,
+					"timeout": 3,
+					"packageType": "zip",
+					"entryPoint": "functions/IncrementViewCounter.handler",
+					"runtime": "nodejs12.x",
+					"layers": [],
+					"policies": {
+						"Version": "2012-10-17",
+						"Statement": [
+							{
+								"Effect": "Allow",
+								"Action": [
+									"dynamodb:DeleteItem",
+									"dynamodb:GetItem",
+									"dynamodb:PutItem",
+									"dynamodb:Scan",
+									"dynamodb:UpdateItem"
+								],
+								"Resource": "arn:aws:dynamodb:us-east-1:431875792165:table/*"
+							}
+						]
+					},
+					"environment": {
+						"variables": {
+							"dbName": "resume-visit-stats"
+						}
+					},
+					"id": "InvrementViewCounter01"
+				},
+				"Table01": {
+					"type": "resource.table",
+					"name": "resume-visit-stats",
+					"tableName": "",
+					"key": {
+						"hash": {
+							"name": "id",
+							"type": "STRING"
+						},
+						"range": {
+							"name": "visits",
+							"type": "NUMBER"
+						}
+					},
+					"aws": {
+						"billingModel": "PAY_PER_REQUEST"
+					},
+					"id": "Table01",
+					"isPointInTimeRecoveryEnabled": false
+				},
+				"ApiGateway01": {
+					"type": "resource.api",
+					"name": "site-counter",
+					"cors": {
+						"type": "api.cors.simple",
+						"origins": "*"
+					},
+					"endpoints": [
+						{
+							"type": "ref",
+							"id": "ApiEndpoint06"
+						}
+					],
+					"id": "ApiGateway01"
+				},
+				"ApiEndpoint06": {
+					"type": "resource.api.endpoint",
+					"name": "api-endpoint-1",
+					"method": "GET",
+					"path": "/",
+					"api": {
+						"type": "ref",
+						"id": "ApiGateway01"
+					},
+					"id": "ApiEndpoint06"
+				},
+				"Domain01": {
+					"type": "resource.domain",
+					"name": "wilsonwilson.world",
+					"domainName": "yourdomain.com",
+					"dnsRegistration": false,
+					"id": "Domain01"
+				}
+			},
+			"unsafe": false,
+			"version": "2019-10-24",
+			"parameters": {
+				"http://www.wilsonwilson.world.s3-website.us-east-2.amazonaws.com ": {
+					"paths": [
+						"resources/WilsonwilsonWorld02/identifier"
+					]
+				},
+				"http://wilsonwilson.world.s3-website.us-east-2.amazonaws.com ": {
+					"paths": [
+						"resources/WilsonwilsonWorld01/identifier"
+					]
+				},
+				"DOMAIN_NAME": {
+					"paths": [
+						"resources/Domain01/domainName"
+					]
+				}
+			}
+		}
+	]
+}
