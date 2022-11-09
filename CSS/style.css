@@ -1,3 +1,6 @@
+@import '/css/components/namewrap.css';
+@import '/css/components//contact-copyright.css';
+
 *{
     margin: 0;
     padding: 0;
@@ -12,56 +15,7 @@ body{
     color: #fff;
 
 }
-#header{
-    width: 100vw;
-    height: 100vh;
-    background-image: url(images/bg.png);
-    background-size: auto;
-    background-position: center;
-}
-/*--------Scrolling Header Window----------*/
-#header .wrapper{
-    display: inline-flex;
-    width: max-content;
-	font-weight: 550;
-	color: #ffffff;
-	overflow: hidden;
-	height: 60px;
-}
-#header .word-wrap li{
-    list-style-type: none;
-	  height: 60px !important;
-	  font-size: 1.0em;
-	  text-transform: uppercase;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-}
-#header .word-wrap{
-	animation: titleflip 5s ease-in-out infinite;
-    animation-direction: alternate;
-  }
-@keyframes titleflip{
-    0%, 20% {
-    transform: translateY(0%);
-    }
-    20%,
-    40% {
-   transform: translateY(-60px);
-    }
-    40%,
-    60% {
-      -webkit-transform: translateY(-120px);
-    }
-    60%,
-    80% {
-    transform: translateY(-180px);
-    }
-    80%,
-    100% {
-    transform: translateY(-240px);
-    }
-  }
+
 
 /*----------------------------*/
 .container{
@@ -338,71 +292,7 @@ nav ul li a:hover::after{
 .btn:hover{
     background: #ff004f;
 }
-/*------------contact--------*/
-.contact-left{
-    flex-basis: 35%;
-}
-.contact-right{
-    flex-basis: 60%;
-}
-.contact-left p{
-    margin-top: 30px;
-}
-.contact-left p i{
-    color: #ff004f;
-    margin-right: 15px;
-    font-size: 25px;
-}
-.social-icons{
-    margin-top: 30px;
-}
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-.social-icons a:hover{
-    color: #ff004f;
-    transform: translateY(-5px);
-}
-.btn.btn2{
-    display: inline-block;
-    background: #ff004f;   
-}
-.content-right form{
-    width: 100%;
-}
-form input, form textarea{
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-}
-form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
-}
-.copyright i{
-    color: #ff004f;
-}
+
 /*--------------------css for small screeens-------------*/
 nav .fa-solid{
     display: none;
@@ -478,11 +368,4 @@ nav .fa-solid{
 	overflow: hidden;
 }
 /* end media query */
-}
-
-
-#msg{
-    color: #61b752;
-    margin-top: -40px;
-    display: block;
 }
