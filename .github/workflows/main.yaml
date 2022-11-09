@@ -1,4 +1,4 @@
-name: GITHub Actions CI
+name: Making Progress Actions
 
 on:
   push:
