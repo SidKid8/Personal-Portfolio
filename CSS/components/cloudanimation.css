@@ -1,0 +1,67 @@
+.cloud-container {
+	height: 200px;
+	width: 	1000px;
+	background-repeat: no-repeat;
+	background: rgb(238,192,198);
+	background: linear-gradient(to bottom, rgba(238,192,198,1) 50%, rgba(126,232,250,1) 100%);	
+	opacity: 96%;
+}
+  .cloud.one{
+	top: 0%;
+	left: 0;
+	position: absolute;
+	display: inline-flex;
+	max-width: 775\px;
+	max-height: 575px;
+	background-size: cover;	
+	animation: zoomies 30s infinite linear;
+	transition-timing-function: ease-in-out;
+}
+.cloud.two{
+	top: 10%;
+	left: 15%;
+	width: 1500px;
+	height: 800px;
+	display: inline-flex;
+	position: absolute;
+	background-size: cover;	
+	animation: zoomies 35s infinite linear;
+	transition-timing-function: ease-in-out;
+}
+.cloud.three{
+	top: 15%;
+	left: 25%;
+	max-width: 900px;
+	max-height: 550px;
+	display: inline-flex;
+	position: absolute;
+	background-size: cover;	
+	/* background-color: blue; */
+	animation: zoomies 40s infinite linear;
+	transition-timing-function: ease-in-out;
+}
+.cloud.four{
+	top: 5%;
+	left: 0%;
+	width: 1000px;
+	height: 600px;
+	display: inline-flex;
+	position: absolute;
+	background-size: cover;	
+	/* background-color: red; */
+	animation: zoomies 30s infinite linear;
+	transition-timing-function: ease-in-out;
+	opacity: 90%;
+	}
+
+@keyframes zoomies {
+	from{
+		left: -100%;
+		transform: translateX(-100%);
+	}
+
+	to{
+		left: 100%;
+		transform: translateX(100%);
+	}
+}
