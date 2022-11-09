@@ -2,8 +2,8 @@
 	height: 200px;
 	width: 	1000px;
 	background-repeat: no-repeat;
-	background: rgb(238,192,198);
-	background: linear-gradient(to bottom, rgba(238,192,198,1) 50%, rgba(126,232,250,1) 100%);	
+	/* background: rgb(238,192,198);
+	background: linear-gradient(to bottom, rgba(238,192,198,1) 50%, rgba(126,232,250,1) 100%);	 */
 	opacity: 96%;
 }
   .cloud.one{
