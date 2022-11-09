@@ -19,6 +19,9 @@
 </script>
     </head>
     <body>
+<!-- !Header Script Import -->
+<script src="./JS/main.JS" type="module"></script>
+
 <div id="header"> 
     <div class="container">
         <nav>
@@ -214,23 +217,6 @@
 <p class="counter"> There has been <br><span id="api"></span> visitors.</p>
     </div>
 </div>
-
-<!------Active Tab Script-->
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    
-    function opentab(tabname){
-        for(const tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link")
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
 <!--------Submit Message Success-------->
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbws1lQmlTeYPi5gIiDkZz7I5ljvT-Yrz3_9L61jlfL65d7cn2Eu1LEEPx8u3pOLnSjUGQ/exec'
