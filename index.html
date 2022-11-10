@@ -19,28 +19,14 @@
             console.log(data)});
 </script>
     </head>
-<!-- <script>
-function opentab(tabname){
 
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
-
-for(const tablink of tablinks){
-    tablink.classList.remove("active-link");
-}
-for(tabcontent of tabcontents){
-    tabcontent.classList.remove("active-tab");
-}
-event.currentTarget.classList.add("active-link")
-document.getElementById(tabname).classList.add("active-tab"); 
-}
-</script> -->
 <body>
 <!-- !Header Div -->
 <div id="header"> 
     <div class="container">
         <nav>
-           <i class="logo fa-regular fa-floppy-disk"></i>
+            <div class="logo">
+                <img src="/images/logo.png"></div>
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -51,7 +37,8 @@ document.getElementById(tabname).classList.add("active-tab");
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
-<!-- !Cloud Animation Div -->
+    </div>
+        <!-- !Cloud Animation Div -->
 <div class="cloud-container">
 		
     <div class="cloud one">
@@ -84,7 +71,7 @@ document.getElementById(tabname).classList.add("active-tab");
 </div>
 <!-- !End Cloud Animation Div -->
         <div class="header-text">
-            <h1>Hi, I'm <span id="namecolor">Sidney the</span>
+            <h1>Hi, I'm <span id="firstnamecolor">Sidney the</span>
                 <div class="wrapper">
                     <ul class="word-wrap">
                         <li>Gamer.</li>
@@ -95,7 +82,7 @@ document.getElementById(tabname).classList.add("active-tab");
                     </ul>
                 </div>
                 <br>
-                        Wilson
+                        <span id="secondnamecolor">Wilson</span>
             </h1>
         </div>
     </div>
@@ -235,7 +222,7 @@ document.getElementById(tabname).classList.add("active-tab");
 </div>
 <!-----------contact--------------->
 <div id="contact">
-    <div class="container">
+    <div class="contactme-container">
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
@@ -243,6 +230,7 @@ document.getElementById(tabname).classList.add("active-tab");
                 <p><i class="fa-solid fa-square-phone"></i>+17084956977</p>
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/sidney-m-wilson/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/SidKid8/testcode"><i class="fa-brands fa-github"></i></a>
                 </div>
                 <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
@@ -264,8 +252,8 @@ document.getElementById(tabname).classList.add("active-tab");
 <p class="counter"> There has been <br><span id="api"></span> visitors.</p>
     </div>
 </div>
-<!--------Submit Message Success-------->
-<!-- <script>
+<!-- ------Submit Message Success-------->
+<script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbws1lQmlTeYPi5gIiDkZz7I5ljvT-Yrz3_9L61jlfL65d7cn2Eu1LEEPx8u3pOLnSjUGQ/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
@@ -282,7 +270,7 @@ document.getElementById(tabname).classList.add("active-tab");
         })
         .catch(error => console.error('Error!', error.message))
     })
-</script> -->
+</script>
 <!--------Mobile Tab Script--------->
 <script>
 

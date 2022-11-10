@@ -1,26 +1,19 @@
-@import '/css/namewrap.css';
-@import '/css/contact-copyright.css';
-@import '/css/cloudanimation.css';
-
-
-*{
+/* Full Body */
+*{ 
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
-    }
-body{
+html, body{
     background: #080808;
     color: #fff;
-
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-
-/*----------------------------*/
+/*------------Nav Container----------------*/
 .container{
-    padding: 20px 10%;   
+    padding: 7.5px 2.5%;
 }
 nav{
     display: flex;
@@ -29,33 +22,34 @@ nav{
     flex-wrap: wrap;
 }
 
-nav .logo{
-    font-size: 400%;
+.logo{
+    display: inherit;
+    width: 100px;
+    height: 100px;
+    
 }
-
 nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #fffafa;
+    color: black;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     position: relative;
+    right: 50%;
 }
-
 nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
-    background-color: #ff004f;
+    background-color: #ffffff;
     position: absolute;
     left: 0;
     bottom: -6px;
     transition: 0.5s;
 }
-
 nav ul li a:hover::after{
     width: 100%;
 }
@@ -67,11 +61,136 @@ nav ul li a:hover::after{
     font-size: 60px;
     margin-top: 20px;
 }
-#namecolor{
+#firstnamecolor{
     color: #0059ff;
 }
+#secondnamecolor{
+    color: #0059ff;
+    margin-left: 198px;
+}
+/* !Cloud CSS */
+.cloud-container {
+    pointer-events: none;
+	height: 200px;
+	width: 	1000px;
+	background-repeat: no-repeat;
+	/* 
+    background: rgb(238,192,198);
+	background: linear-gradient(to bottom, rgba(238,192,198,1) 50%, rgba(126,232,250,1) 100%);
+	opacity: 96%;
+    */
+}
+  .cloud.one{
+	top: -15%;
+	left: 0;
+	position: absolute;
+	display: inherit;
+	max-width: 2360px;
+	max-height: 984px;
+	background-size: cover;	
+	animation: zoomies 7s infinite linear;
+	transition-timing-function: ease-in-out;
+    opacity: 50%;
+}
+.cloud.two{
+	top: -10%;
+	width: 2360px;
+	height: 984px;
+	display: inherit;
+	position: absolute;
+	background-size: cover;	
+	animation: zoomies 35s infinite linear;
+	transition-timing-function: ease-in-out;
+    opacity: 50%;
+}
+.cloud.three{
+	top: -5%;
+	max-width: 8000px;
+	max-height: 650px;
+	display: inline-flex;
+	position: absolute;
+	background-size: cover;	
+	animation: zoomies 40s infinite linear;
+	transition-timing-function: ease-in-out;
+    opacity: 50%;
+}
+.cloud.four{
+	top: 0%;
+	left: 0%;
+	width: 1171px;
+	height: 500px;
+	display: inherit;
+	position: absolute;
+	background-size: cover;	
+	animation: zoomies 30s infinite linear;
+	transition-timing-function: ease-in-out;
+	opacity: 90%;
+	}
 
-/*----------------about---------*/
+@keyframes zoomies {
+	from{
+		left: -100%;
+		transform: translateX(-100%);
+	}
+
+	to{
+		left: 100%;
+		transform: translateX(100%);
+	}
+}
+/* Header Namewrap css */
+/*--------Name Container----------*/
+#header{
+    width:  100vw;
+    height: 100vh;
+    background-image: url(/images/bg.png);
+    background-size: auto;
+    background-position: center;
+  }
+  #header .wrapper{
+      display: inline-flex;
+      width: max-content;
+      font-weight: 550;
+      color: #ffffff;
+      overflow: hidden;
+      height: 60px;
+  }
+  #header .word-wrap li{
+      list-style-type: none;
+        height: 60px !important;
+        font-size: 1.0em;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  }
+  #header .word-wrap{
+      animation: titleflip 5s ease-in-out infinite;
+      animation-direction: alternate;
+    }
+  @keyframes titleflip{
+      0%, 20% {
+      transform: translateY(0%);
+      }
+      20%,
+      40% {
+     transform: translateY(-60px);
+      }
+      40%,
+      60% {
+        -webkit-transform: translateY(-120px);
+      }
+      60%,
+      80% {
+      transform: translateY(-180px);
+      }
+      80%,
+      100% {
+      transform: translateY(-240px);
+      }
+    }
+  
+/*---------About---------*/
 #about{
     padding: 80px 0;
     color: #ababab;
@@ -100,6 +219,7 @@ nav ul li a:hover::after{
     font-size: 18px;
     color: #8db9ea;
 }
+/* About Tabs */
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
@@ -201,7 +321,7 @@ nav ul li a:hover::after{
     display: block;
     transition: transform 0.5s;
 }
-/*--------Different Colored Layers--------*/
+/* --------Different 'My Work'  Layers-------- */
 .layer.first{
     width: 100%;
     height: 0%;
@@ -256,7 +376,6 @@ nav ul li a:hover::after{
     font-size: 25px;
     transition: height 0.5s;
 }
-
 .layer h3{
     font-weight: 500;
     margin-top: 20px;
@@ -293,12 +412,85 @@ nav ul li a:hover::after{
 .btn:hover{
     background: #ff004f;
 }
+/* !Contact Me & Copyright */
+.contactme-container{
+    padding: 20px 10%;   
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;   
+}
+.content-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* !Submit Message css */
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff004f;
+}
 
-/*--------------------css for small screeens-------------*/
+ /* !All css for small screeens below -----------*/
 nav .fa-solid{
     display: none;
 }
-
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/phone-background.png);
@@ -359,7 +551,6 @@ nav .fa-solid{
         font-size: 14px;
     }
 /* Media Screen Text Wrapper */
-
 #header .wrapper{
     display: inline-flex;
     width: max-content;
