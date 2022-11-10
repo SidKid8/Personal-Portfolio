@@ -88,7 +88,7 @@ nav ul li a:hover::after{
 	max-width: 2360px;
 	max-height: 984px;
 	background-size: cover;	
-	animation: zoomies 7s infinite linear;
+	animation: zoomies 45s infinite linear;
 	transition-timing-function: ease-in-out;
     opacity: 50%;
 }
@@ -99,9 +99,9 @@ nav ul li a:hover::after{
 	display: inherit;
 	position: absolute;
 	background-size: cover;	
-	animation: zoomies 35s infinite linear;
+	animation: zoomies 35 infinite linear;
 	transition-timing-function: ease-in-out;
-    opacity: 50%;
+    opacity: 60%;
 }
 .cloud.three{
 	top: -5%;
@@ -110,9 +110,9 @@ nav ul li a:hover::after{
 	display: inline-flex;
 	position: absolute;
 	background-size: cover;	
-	animation: zoomies 40s infinite linear;
+	animation: zoomies 45s infinite linear;
 	transition-timing-function: ease-in-out;
-    opacity: 50%;
+    opacity: 90%;
 }
 .cloud.four{
 	top: 0%;
@@ -214,6 +214,7 @@ nav ul li a:hover::after{
     font-size: 50px;
     font-weight: 600;
     color: whitesmoke;
+    margin-bottom: 20px;
 }
 
 .about-me{
@@ -351,13 +352,13 @@ nav ul li a:hover::after{
 
 /*-------Portfolio-----------*/
 #portfolio{
-    padding: 50px 0;
+    padding: 30px 0;
 }
 .work-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .work{
     border-radius: 10px;
