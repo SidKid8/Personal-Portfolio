@@ -71,7 +71,7 @@ nav ul li a:hover::after{
 /* !Cloud CSS */
 .cloud-container {
     pointer-events: none;
-	height: 200px;
+	height: 48px;
 	width: 	1000px;
 	background-repeat: no-repeat;
 	/* 
@@ -88,7 +88,7 @@ nav ul li a:hover::after{
 	max-width: 2360px;
 	max-height: 984px;
 	background-size: cover;	
-	animation: zoomies 7s infinite linear;
+	animation: zoomies 45s infinite linear;
 	transition-timing-function: ease-in-out;
     opacity: 50%;
 }
@@ -99,12 +99,12 @@ nav ul li a:hover::after{
 	display: inherit;
 	position: absolute;
 	background-size: cover;	
-	animation: zoomies 35s infinite linear;
+	animation: zoomies 48s infinite linear;
 	transition-timing-function: ease-in-out;
     opacity: 50%;
 }
 .cloud.three{
-	top: -5%;
+	top: -10%;
 	max-width: 8000px;
 	max-height: 650px;
 	display: inline-flex;
@@ -115,14 +115,14 @@ nav ul li a:hover::after{
     opacity: 50%;
 }
 .cloud.four{
-	top: 0%;
+	top: -25%;
 	left: 0%;
 	width: 1171px;
 	height: 500px;
 	display: inherit;
 	position: absolute;
 	background-size: cover;	
-	animation: zoomies 30s infinite linear;
+	animation: zoomies 35s infinite linear;
 	transition-timing-function: ease-in-out;
 	opacity: 90%;
 	}
@@ -144,8 +144,18 @@ nav ul li a:hover::after{
     width:  100vw;
     height: 100vh;
     background-image: url(/images/bg.png);
+    
     background-size: auto;
     background-position: center;
+  }
+  #header .bgopacity{
+    
+    display: inherit;
+    background-size: auto;
+    background-position: center;
+    background: rgb(108,79,43);
+    background: linear-gradient(180deg, rgba(108,79,43,1) 0%, rgba(0,0,0,1) 100%);
+    opacity: 50%;
   }
   #header .wrapper{
       display: inline-flex;
