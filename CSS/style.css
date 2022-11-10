@@ -90,7 +90,7 @@ nav ul li a:hover::after{
 	background-size: cover;	
 	animation: zoomies 45s infinite linear;
 	transition-timing-function: ease-in-out;
-    opacity: 50%;
+    opacity: 60%;
 }
 .cloud.two{
 	top: -10%;
@@ -99,9 +99,9 @@ nav ul li a:hover::after{
 	display: inherit;
 	position: absolute;
 	background-size: cover;	
-  animation: zoomies 48s infinite linear;
+  animation: zoomies 40s infinite linear;
 	transition-timing-function: ease-in-out;
-    opacity: 60%;
+    opacity: 35%;
 }
 .cloud.three{
 	top: -10%;
@@ -110,9 +110,9 @@ nav ul li a:hover::after{
 	display: inline-flex;
 	position: absolute;
 	background-size: cover;	
-	animation: zoomies 45s infinite linear;
+	animation: zoomies 55s infinite linear;
 	transition-timing-function: ease-in-out;
-    opacity: 90%;
+    opacity: 60%;
 }
 .cloud.four{
 	top: -25%;
@@ -124,7 +124,7 @@ nav ul li a:hover::after{
 	background-size: cover;	
 	animation: zoomies 35s infinite linear;
 	transition-timing-function: ease-in-out;
-	opacity: 90%;
+	opacity: 60%;
 	}
 
 @keyframes zoomies {
