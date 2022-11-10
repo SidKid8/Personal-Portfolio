@@ -1,6 +1,6 @@
-@import '/css/components/namewrap.css';
-@import '/css/components//contact-copyright.css';
-@import '/css/components/cloudanimation.css';
+@import '/css/namewrap.css';
+@import '/css/contact-copyright.css';
+@import '/css/cloudanimation.css';
 
 
 *{

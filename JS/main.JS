@@ -1,6 +1,14 @@
-// import './js/contact.js';
+// import {submit} from '../JS/contact.js';
+// var submitmsg = document.getSelection
+
+// for (const msg of submitmsg){
+
+// }
+
 // import './js/siteapi.js';
-import { opentab } from '../JS/tabclick.JS';
+
+// !works
+import { opentab } from '../JS/tabclick.JS'; 
 
 var allTabs = document.querySelectorAll('.tab-links');
 
