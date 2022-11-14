@@ -31,14 +31,14 @@ nav{
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px 15px;
 }
 nav ul li a{
     color: black;
     text-decoration: none;
     font-size: 25px;
     position: relative;
-    right: 50%;
+    right: 5%;
 }
 nav ul li a::after{
     content: '';
@@ -74,18 +74,13 @@ nav ul li a:hover::after{
 	height: 48px;
 	width: 	1000px;
 	background-repeat: no-repeat;
-	/* 
-    background: rgb(238,192,198);
-	background: linear-gradient(to bottom, rgba(238,192,198,1) 50%, rgba(126,232,250,1) 100%);
-	opacity: 96%;
-    */
 }
   .cloud.one{
 	top: -15%;
 	left: 0;
 	position: absolute;
 	display: inherit;
-	max-width: 2360px;
+	max-width: max-content;
 	max-height: 984px;
 	background-size: cover;	
 	animation: zoomies 45s infinite linear;
@@ -94,8 +89,8 @@ nav ul li a:hover::after{
 }
 .cloud.two{
 	top: -10%;
-	width: 2360px;
-	height: 984px;
+    max-width: max-content;
+    max-height: 984px;
 	display: inherit;
 	position: absolute;
 	background-size: cover;	
@@ -105,7 +100,7 @@ nav ul li a:hover::after{
 }
 .cloud.three{
 	top: -10%;
-	max-width: 8000px;
+	max-width: max-content;
 	max-height: 650px;
 	display: inline-flex;
 	position: absolute;
@@ -117,8 +112,8 @@ nav ul li a:hover::after{
 .cloud.four{
 	top: -25%;
 	left: 0%;
-	width: 1171px;
-	height: 500px;
+	max-width: max-content;
+	max-height: 500px;
 	display: inherit;
 	position: absolute;
 	background-size: cover;	
@@ -143,19 +138,8 @@ nav ul li a:hover::after{
 #header{
     width:  100vw;
     height: 100vh;
-    background-image: url(/images/bg.png);
-    
-    background-size: auto;
-    background-position: center;
-  }
-  #header .bgopacity{
-    
-    display: inherit;
-    background-size: auto;
-    background-position: center;
-    background: rgb(108,79,43);
-    background: linear-gradient(180deg, rgba(108,79,43,1) 0%, rgba(0,0,0,1) 100%);
-    opacity: 50%;
+    background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(52,52,52,0.8176587529543067) 89%, rgba(8,8,8,1) 100%), url(/images/bg.png);
+    background-size: cover;
   }
   #header .wrapper{
       display: inline-flex;
@@ -175,7 +159,7 @@ nav ul li a:hover::after{
         justify-content: center;
   }
   #header .word-wrap{
-      animation: titleflip 5s ease-in-out infinite;
+      animation: titleflip 8s ease-in-out infinite;
       animation-direction: alternate;
     }
   @keyframes titleflip{
@@ -202,7 +186,7 @@ nav ul li a:hover::after{
   
 /*---------About---------*/
 #about{
-    padding: 80px 0;
+    padding: 50px 0;
     color: #ababab;
 }
 .row{
@@ -479,6 +463,15 @@ nav ul li a:hover::after{
 .contact-left{
     flex-basis: 35%;
 }
+.contact-left h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+.contact-left p{
+    font-size: 20px;
+}
 .contact-right{
     flex-basis: 60%;
 }
@@ -547,21 +540,35 @@ form .btn2{
     color: #ff004f;
 }
 
- /* !All css for small screeens below -----------*/
 nav .fa-solid{
     display: none;
 }
-@media only screen and (max-width: 600px){
-    #header{
-        background-image: url(images/phone-background.png);
+ /* !All css for small screeens below -----------*/
+
+ 
+ @media only screen and (max-width: 600px){
+    html, body{
+        overflow-x: hidden;
+    } 
+    
+     #header{
+        max-height: 750px;
+        background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(52,52,52,0.8176587529543067) 89%, rgba(8,8,8,1) 100%), url(/images/bg.png);
         background-size: cover;
     }
+    .cloud-container {
+        pointer-events: none;
+        height: 8px;
+        width: 	1000px;
+        background-repeat: no-repeat;
+        opacity: 50%;
+    }
     .header-text{
-        margin-top: 100%;
+        margin-top: 45%;
         font-size: 16px;
     }
     .header-text h1{
-        font-size: 30px;
+        font-size: 25px;
     }
     nav .fa-solid{
         display: block;
@@ -571,12 +578,12 @@ nav .fa-solid{
         background: #ff004f;
         position: fixed;
         top: 0;
-        right: -200px;
+        right: -100px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
-        transition: right 0.5s;
+        transition: right 0.2s;
     }
     nav ul li{
         display: block;
