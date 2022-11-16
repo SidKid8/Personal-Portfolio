@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-name: Making Progress Actions
-=======
-name: Progress
->>>>>>> a52bde3a0d6af1afc2ba88011562d3960252338a
+name: Pre SAM DEV
 
 on:
   push:
