@@ -1,0 +1,120 @@
+/* !Cloud CSS ---------------*/
+/* !Rain&Lightning CSS */
+.rain{
+    position: relative;
+    display: inherit;
+    top: -343%;
+    height: calc(343% + 100vh);
+    background-image: url(/images/rain-lightning/rain.png);
+    animation: rain 2.9s linear infinite;
+}
+@keyframes rain{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 20% 100%;
+    }
+}
+.rain::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/rain-lightning/lightining.png);
+    top: -100px;
+    transform: rotate(180deg);
+    animation: lightining 5s linear infinite;
+    opacity: 1;
+}
+@keyframes lightining{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    21%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    31%{
+        opacity: 1;
+    }
+    35%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.cloud-container {
+    pointer-events: none;
+	height: 48px;
+	max-width: 	100%;
+	background-repeat: no-repeat;
+    opacity: 75%;
+}
+  .cloud.one{
+	top: -15%;
+	left: 0;
+	position: absolute;
+	display: inherit;
+	max-width: max-content;
+	max-height: 984px;
+	background-size: cover;	
+	animation: zoomies 45s infinite linear;
+	transition-timing-function: ease-in-out;
+    opacity: 60%;
+}
+.cloud.two{
+	top: -10%;
+    max-width: max-content;
+    max-height: 984px;
+	display: inherit;
+	position: absolute;
+	background-size: cover;	
+  animation: zoomies 40s infinite linear;
+	transition-timing-function: ease-in-out;
+    opacity: 35%;
+}
+.cloud.three{
+	top: -10%;
+	max-width: max-content;
+	max-height: 650px;
+	display: inline-flex;
+	position: absolute;
+	background-size: cover;	
+	animation: zoomies 55s infinite linear;
+	transition-timing-function: ease-in-out;
+    opacity: 60%;
+}
+.cloud.four{
+	top: -25%;
+	left: 0%;
+	max-width: max-content;
+	max-height: 500px;
+	display: inherit;
+	position: absolute;
+	background-size: cover;	
+	animation: zoomies 35s infinite linear;
+	transition-timing-function: ease-in-out;
+	opacity: 60%;
+	}
+
+@keyframes zoomies {
+	from{
+		left: -100%;
+		transform: translateX(-100%);
+	}
+
+	to{
+		left: 100%;
+		transform: translateX(100%);
+	}
+}
