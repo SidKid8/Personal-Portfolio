@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="'en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-vwidth, initial-scale=1.0">
-        <title>Sidney Wilson's Cloud Resume</title>
-        <link rel="stylesheet" href="/CSS/style.css">
-        <script src="https://kit.fontawesome.com/1bbcfc5787.js" crossorigin="anonymous"></script>
-        <script src="./JS/main.JS" type="module"></script>
-<!-- !Fetch Visitor Api -->
-<script type = "text/javascript">
-    var apiUrl = "https://788j0t9u6i.execute-api.us-east-2.amazonaws.com/prod/";
-        fetch(apiUrl)
-           .then(response => response.json())
-           .then(data =>{
-                var count = document.getElementById('api');
-            count.innerHTML = data.body;
-            console.log(data)});
-</script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-vwidth, initial-scale=1.0" />
+    <title>Sidney Wilson's Cloud Resume</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <script
+      src="https://kit.fontawesome.com/1bbcfc5787.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/main.JS" type="module"></script>
+    <!-- !Fetch Visitor Api -->
+    <script type="text/javascript">
+      var apiUrl =
+        'https://788j0t9u6i.execute-api.us-east-2.amazonaws.com/prod/';
+      fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          var count = document.getElementById('api');
+          count.innerHTML = data.body;
+          console.log(data);
+        });
+    </script>
+  </head>
 
-<body>
-  <!-- !Header Div -->
-  <div id="header">
-    
-    
-    <div class="container">
-      <nav>
-        <div class="logo">
-          <img src="/images/logo.png"></div>
+  <body>
+    <!-- !Header Div -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="/images/logo.png" alt="Wilson World Logo" />
+          </div>
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -39,134 +43,257 @@
           </ul>
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
+        <!-- !End Cloud Animation Div -->
+        <div class="header-text">
+          <h1>
+            Hi, I'm <span id="firstnamecolor">Sidney Wilson</span> the
+            <div class="wrapper">
+              <ul class="word-wrap">
+                <li>Gamer.</li>
+                <li>Engineer.</li>
+                <li>Organizer.</li>
+                <li>Adventurer.</li>
+                <li>Discoverer.</li>
+              </ul>
+            </div>
+            <!-- <span id="secondnamecolor">Wilson</span> -->
+          </h1>
+        </div>
       </div>
+
       <!-- !Cloud Animation Div -->
       <div class="cloud-container">
         <div class="rain"></div>
         <div class="lightning"></div>
-		
-    <div class="cloud one">
-      <img src="images/cloudpics/cloud2.png">
-    </div>
-    <div class="cloud one">
-      <img src="images/cloudpics/cloud2.png">
-    </div>
-    <!--  -->
-    <div class="cloud two">
-      <img src="images/cloudpics/cloud2.png">
-    </div>
-    <div class="cloud two">
-      <img src="images/cloudpics/cloud2.png">
-    </div>
-    <!--  -->
-    <div class="cloud three">
-      <img src="images/cloudpics/cloud4.png">
-    </div>
-    <div class="cloud three">
-      <img src="images/cloudpics/cloud4.png">
-    </div>
-    <!--  -->
-    <div class="cloud four">
-      <img src="images/cloudpics/cloud3.png">
-    </div>
-    <div class="cloud four">
-      <img src="images/cloudpics/cloud3.png">
-    </div>
-</div>
-<!-- !End Cloud Animation Div -->
-        <div class="header-text">
-            <h1>Hi, I'm <span id="firstnamecolor">Sidney</span> the
-                <div class="wrapper">
-                    <ul class="word-wrap">
-                        <li>Gamer.</li>
-                        <li>Engineer.</li>
-                        <li>Organizer.</li>
-                        <li>Adventurer.</li>
-                        <li>Discoverer.</li>
-                    </ul>
-                </div>
-                <br>
-                        <span id="secondnamecolor">Wilson</span>
-            </h1>
+
+        <div class="cloud one">
+          <img src="images/cloudpics/cloud2.png" />
         </div>
+        <div class="cloud one">
+          <img src="images/cloudpics/cloud2.png" />
+        </div>
+
+        <div class="cloud two">
+          <img src="images/cloudpics/cloud2.png" />
+        </div>
+        <div class="cloud two">
+          <img src="images/cloudpics/cloud2.png" />
+        </div>
+
+        <div class="cloud three">
+          <img src="images/cloudpics/cloud4.png" />
+        </div>
+        <div class="cloud three">
+          <img src="images/cloudpics/cloud4.png" />
+        </div>
+
+        <div class="cloud four">
+          <img src="images/cloudpics/cloud3.png" />
+        </div>
+        <div class="cloud four">
+          <img src="images/cloudpics/cloud3.png" />
+        </div>
+      </div>
     </div>
-</div>
-<!-----------About--------->
-<div id="about">
-    <div class="container">
+
+    <!-----------About--------->
+    <div id="about">
+      <div class="container">
         <div class="row">
-            <div class="about-col-1">
-                <!-- <img src="images/user.png"> -->
-                <img src="images/fight.gif">
+          <div class="about-col-1">
+            <img src="images/fight.gif" alt="" />
+          </div>
+
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p class="about-me">
+              Highly organized and versatile computer engineer with 4 years of
+              experience in hardware maintenance and troubleshooting. Adaptable
+              leader with an ability to work independently and with others,
+              creating effective presentations, and developing opportunities
+              that further establish organizational goals. Seeking to bring my
+              skills and experience to a progressive organization with a
+              positive andsupportive culture where I can start and grow a
+              career.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" title="skills">Skills</p>
+              <p class="tab-links" title="experience">Experience</p>
+              <p class="tab-links" title="education">
+                Education & Certifications
+              </p>
             </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p class="about-me">
-                    Highly organized and versatile computer engineer with 4 years of experience in hardware maintenance and troubleshooting. Adaptable leader with an ability to work independently and with others, creating effective presentations, and developing opportunities that further establish organizational goals. Seeking to bring my skills and experience to a progressive organization with a positive and supportive culture where I can start and grow a career.
-                </p>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" title="skills"> Skills</p>
-                    <p class="tab-links" title="experience"> Experience</p>
-                    <p class="tab-links" title="education"> Education & Certifications</p>
-                </div>
-<!--------Skills---------->                
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Technical</span><br><br><ul><i class="fa-solid fa-shield-halved">
-                                                        </i> Data Protection & Disaster Recovery</ul>
-                                                  <br><ul><i class="fa-brands fa-cloudversify">
-                                                        </i> AWS Cloud Management</ul>
-                                                  <br><ul><i class="fa-solid fa-laptop-medical">
-                                                        </i> Computer Diagnostician</ul>
-                                                    </li>
-                                                    <br>
-                        <li><span>Interpersonal</span><br><br>
-                            <ul><i class="fa-solid fa-circle-notch"></i> Technical Communication</ul>
-                        <br><ul><i class="fa-solid fa-circle-notch"></i> Project Management</ul>
-                        <br><ul><i class="fa-solid fa-circle-notch"></i> Customer Service</ul>
-                        </li>
-                    </ul>
-                </div>
-<!--------Experience--------->                
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>Kitchen Leader at Amazon Fresh</span><br>
-                            <br><ul><i class="fa-regular fa-calendar-days"></i> January, 2021 to Present</ul>
-                            <br><ul>Magnified long term strategies to develop a safer and efficient work environment.</ul>
-                            <br><ul>Working closely with management to retain our best practice image as a leading training site.</ul>
-                            <br><ul>Managing onboarding and training for new employees while modeling positive guidance and<br> maintaining a safety environment, while keeping the customer&#39;s best interest.</ul>
-                        </li><br>
-                        <li><span>Golf Assistant</span><br>
-                            <br><ul><i class="fa-regular fa-calendar-days"></i> April, 2011 to 2021</ul>
-                            <br><ul>Coordinated events while creating an enjoyable and family-oriented environment amongst the membership.</ul>
-                            <br><ul>Nurtured and grew existing relationships by providing pristine service to future clients of the club.</ul>
-                        </li><br>  
-                        <li><span>Overnight Team Lead at Target</span><br>
-                            <br><ul><i class="fa-regular fa-calendar-days"></i> January, 2017 to 2018</ul>
-                            <br><ul>Improved the reconstruction project of the location amongst various teams to produce an enhanced environment<br> for our community and customers alike.</ul>
-                            <br><ul>Planned, developed, and provided strategies for staff development programs for employees, using knowledge of effectiveness of methods such as demonstrations, onboard training and meetings.</ul>
-                        </li>
-                    </ul>
-                </div>
-<!--------Education---------->                
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>Amazon Web Services</span><br></li>
-                        <i class="fa-solid fa-certificate"></i> Data Protection & Disaster Recovery Specialist<br>
-                        <img src="images/aws-data-badge.png.png"></li>
-                        <li><span> Food Handler Certification</span></li>
-                        <i class="fa-regular fa-calendar-days"></i> January 2021 to 2024</li>
-                        <li><span> Bachelor of Science: Computer Engineering</span>
-                        <li>Milwaukee School of Engineering</li>
-                        <i class="fa-regular fa-calendar-days"></i> May 2018 </li>
-                    </ul>
-                </div>
+
+            <!--SKILLS-->
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <div class="tab-contents-title">Technical</div>
+                <li>
+                  <div class="tab-contents-desc">
+                    <i class="fa-solid fa-shield-halved"></i> Data Protection &
+                    Disaster Recovery
+                  </div>
+                </li>
+
+                <li>
+                  <div class="tab-contents-desc">
+                    <i class="fa-brands fa-cloudversify"></i> AWS Cloud
+                    Management
+                  </div>
+                </li>
+
+                <li>
+                  <div class="tab-contents-desc">
+                    <i class="fa-solid fa-laptop-medical"></i> Computer
+                    Diagnostician
+                  </div>
+                </li>
+              </ul>
+
+              <ul>
+                <div class="tab-contents-title">Interpersonal</div>
+                <li>
+                  <div class="tab-contents-desc">
+                    <i class="fa-solid fa-circle-notch"></i> Technical
+                    Communication
+                  </div>
+                </li>
+
+                <li>
+                  <div class="tab-contents-desc">
+                    <i class="fa-solid fa-circle-notch"></i> Project Management
+                  </div>
+                </li>
+
+                <li>
+                  <div class="tab-contents-desc">
+                    <i class="fa-solid fa-circle-notch"></i> Customer Service
+                  </div>
+                </li>
+              </ul>
             </div>
+
+            <!--EXPERIENCE-->
+            <div class="tab-contents" id="experience">
+              <ul>
+                <div class="tab-contents-title">
+                  Kitchen Leader at Amazon Fresh
+                </div>
+                <div class="tab-contents-date">
+                  <i class="fa-regular fa-calendar-days"></i> January, 2021 to
+                  Present
+                </div>
+
+                <li>
+                  <div class="tab-contents-desc">
+                    Magnified long term strategies to develop a safer and
+                    efficient work environment.
+                  </div>
+                </li>
+                <li>
+                  <div class="tab-contents-desc">
+                    Working closely with management to retain our best practice
+                    image as a leading training site.
+                  </div>
+                </li>
+                <li>
+                  <div class="tab-contents-desc">
+                    Managing onboarding and training for new employees while
+                    modeling positive guidance and maintaining a safety
+                    environment, while keeping the customer&#39;s best interest.
+                  </div>
+                </li>
+              </ul>
+
+              <ul>
+                <div class="tab-contents-title">
+                  Overnight Team Lead at Target
+                </div>
+                <div class="tab-contents-date">
+                  <i class="fa-regular fa-calendar-days"></i> January, 2017 to
+                  2018
+                </div>
+
+                <li>
+                  <div class="tab-contents-desc">
+                    Improved the reconstruction project of the location amongst
+                    various teams to produce an enhanced environment for our
+                    community and customers alike.
+                  </div>
+                </li>
+                <li>
+                  <div class="tab-contents-desc">
+                    Planned, developed, and provided strategies for staff
+                    development programs for employees, using knowledge of
+                    effectiveness of methods such as demonstrations, onboard
+                    training and meetings.
+                  </div>
+                </li>
+              </ul>
+
+              <ul>
+                <div class="tab-contents-title">Golf Assistant</div>
+                <div class="tab-contents-date">
+                  <i class="fa-regular fa-calendar-days"></i> April, 2011 to
+                  2021
+                </div>
+
+                <li>
+                  <div class="tab-contents-desc">
+                    Coordinated events while creating an enjoyable and
+                    family-oriented environment amongst the membership.
+                  </div>
+                </li>
+                <li>
+                  <div class="tab-contents-desc">
+                    Nurtured and grew existing relationships by providing
+                    pristine service to future clients of the club.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!--EDUCATION-->
+            <div class="tab-contents" id="education">
+              <ul>
+                <div class="tab-contents-title">Amazon Web Services</div>
+                <div class="tab-contents-date">
+                  <i class="fa-regular fa-calendar-days"></i> January, 2021 to
+                  2024
+                </div>
+
+                <li>
+                  <div class="tab-contents-desc">
+                    <i class="fa-solid fa-certificate"></i> Data Protection &
+                    Disaster Recovery Specialist
+                  </div>
+                  <img src="/images/aws-data-badge.png" alt="" />
+                </li>
+              </ul>
+
+              <ul>
+                <div class="tab-contents-title">
+                  Bachelor of Science: Computer Engineering
+                </div>
+                <div class="tab-contents-date">
+                  <i class="fa-regular fa-calendar-days"></i> May, 2018
+                </div>
+
+                <li>
+                  <div class="tab-contents-desc">
+                    Milwaukee School of Engineering
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- !replacing with icons -->
-<!-- <div id="services">
+
+    <!-- !replacing with icons -->
+    <!-- <div id="services">
     <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
@@ -191,179 +318,229 @@
         </div>
     </div>
 </div> -->
-<!-- !Skill Icons/Logos -->
-<div class="skillcontainer">
-      <h1 class="sub-title techtree">
-        Technical Competencies
-      </h3>
-      <br>
-    <div class="resume-item__list">
-      <ul class="resume-item__list-items hard-skills">
-        <li>
-          <div class="hard-skills__icon">
-            <img
-              src="/images/logos/csslogo.png"
-              alt="Skill Logo"
-              class="hard-skills__icon-inner"
-            />
-          </div>
-          CSS
-        </li>
-        <li>
-          <div class="hard-skills__icon">
-            <img
-            src="/images/logos/gitlogo.png"
-            alt="Skill Logo"
-            class="hard-skills__icon-inner"
-            />
-          </div>
-          GitHub
-        </li>
-        <li>
-          <div class="hard-skills__icon">
-            <img
-              src="/images/logos/html5logo.png"
-              alt="Skill Logo"
-              class="hard-skills__icon-inner"
-            />
-          </div>
-          HTML
-        </li>
-        <li>
-          <div class="hard-skills__icon">
-            <img
-              src="/images/logos/awslogo.png"
-              alt="Skill Logo"
-              class="hard-skills__icon-inner"
-            />
-          </div>
-          AWS
-        </li>
-        <li>
-          <div class="hard-skills__icon">
-            <img
-              src="/images/logos/javalogo.png"
-              alt="Skill Logo"
-              class="hard-skills__icon-inner"
-            />
-          </div>
-          Java
-        </li>
-        <li>
-          <div class="hard-skills__icon">
-            <img
-              src="/images/logos/vscodelogo.png"
-              alt="Skill Logo"
-              class="hard-skills__icon-inner"
-            />
-          </div>
-          VSCode
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-</li>
-</ul>
+    <!-- !Skill Icons/Logos -->
+    <div class="skillcontainer">
+      <div class="container">
+        <h1 class="sub-title techtree">Technical Competencies</h1>
+        <div class="resume-item__list">
+          <ul class="resume-item__list-items hard-skills">
+            <li>
+              <div class="hard-skills__icon">
+                <img
+                  src="/images/logos/csslogo.png"
+                  alt="Skill Logo"
+                  class="hard-skills__icon-inner"
+                />
+              </div>
+              CSS
+            </li>
 
-<!----------Portfolio--------->
-<div id="portfolio">
-    <div class="container">
+            <li>
+              <div class="hard-skills__icon">
+                <img
+                  src="/images/logos/gitlogo.png"
+                  alt="Skill Logo"
+                  class="hard-skills__icon-inner"
+                />
+              </div>
+              GitHub
+            </li>
+
+            <li>
+              <div class="hard-skills__icon">
+                <img
+                  src="/images/logos/html5logo.png"
+                  alt="Skill Logo"
+                  class="hard-skills__icon-inner"
+                />
+              </div>
+              HTML
+            </li>
+
+            <li>
+              <div class="hard-skills__icon">
+                <img
+                  src="/images/logos/awslogo.png"
+                  alt="Skill Logo"
+                  class="hard-skills__icon-inner"
+                />
+              </div>
+              AWS
+            </li>
+
+            <li>
+              <div class="hard-skills__icon">
+                <img
+                  src="/images/logos/javalogo.png"
+                  alt="Skill Logo"
+                  class="hard-skills__icon-inner"
+                />
+              </div>
+              Java
+            </li>
+
+            <li>
+              <div class="hard-skills__icon">
+                <img
+                  src="/images/logos/vscodelogo.png"
+                  alt="Skill Logo"
+                  class="hard-skills__icon-inner"
+                />
+              </div>
+              VSCode
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!----------Portfolio--------->
+    <div id="portfolio">
+      <div class="container">
         <h1 class="sub-title work">My Work</h1>
         <div class="work-list">
-            <div class="work">
-                <img src="images/work-1.png">
-                <div class="layer first">
-                    <h3>Cloud Architect</h3>
-                    <p>Cloud Architect responsibilities include building and maintaining the cloud systems at our organization, along with managing servers, storage, and our network. Ultimately, you will work with various IT teams to ensure our online capabilities meet the needs of our organization.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+          <div class="work">
+            <img src="images/work-1.png" />
+            <div class="layer first">
+              <h3>Cloud Architect</h3>
+              <p>
+                Cloud Architect responsibilities include building and
+                maintaining the cloud systems at our organization, along with
+                managing servers, storage, and our network. Ultimately, you will
+                work with various IT teams to ensure our online capabilities
+                meet the needs of our organization.
+              </p>
+
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
             </div>
-            <div class="work">
-                <img src="images/work-2.png">
-                <div class="layer second">
-                    <h3>Web Development</h3>
-                    <p>The web developer is responsible for planning and developing software solutions and web applications, supporting and maintaining a company's websites and digital products. The day-to-day work of the web developer highly depends on constantly evolving internet innovations.
-                    </p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+          </div>
+
+          <div class="work">
+            <img src="images/work-2.png" />
+            <div class="layer second">
+              <h3>Web Development</h3>
+              <p>
+                The web developer is responsible for planning and developing
+                software solutions and web applications, supporting and
+                maintaining a company's websites and digital products. The
+                day-to-day work of the web developer highly depends on
+                constantly evolving internet innovations.
+              </p>
+
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
             </div>
-            <div class="work">
-                <img src="images/work-3.png">
-                <div class="layer third">
-                    <h3>Stock & Inventory Management</h3>
-                    <p>Inventory managers oversee the inventory levels of businesses. They lead a team of inventory or warehouse employees to receive and record new stock as its delivered and shipped out. Their duties include recording daily deliveries, evaluating new shipments, and analyzing different suppliers.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+          </div>
+
+          <div class="work">
+            <img src="images/work-3.png" />
+            <div class="layer third">
+              <h3>Stock & Inventory Management</h3>
+              <p>
+                Inventory managers oversee the inventory levels of businesses.
+                They lead a team of inventory or warehouse employees to receive
+                and record new stock as its delivered and shipped out. Their
+                duties include recording daily deliveries, evaluating new
+                shipments, and analyzing different suppliers.
+              </p>
+
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
             </div>
+          </div>
         </div>
         <!-- Need link for later. -->
         <!-- <a href="#" class="btn">See more</a> -->
+      </div>
     </div>
-</div>
-<!-----------contact--------------->
-<div id="contact">
-    <div class="contactme-container">
+    <!-----------contact--------------->
+    <div id="contact">
+      <div class="contactme-container">
         <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title contact">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>sidmwilson@gmail.com</p>
-                <p><i class="fa-solid fa-square-phone"></i>(+1)708-495-6977</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/sidney-m-wilson/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/SidKid8/testcode"><i class="fa-brands fa-github"></i></a>
-                </div>
-                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+          <div class="contact-left">
+            <h1 class="sub-title contact">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>sidmwilson@gmail.com</p>
+            <p><i class="fa-solid fa-square-phone"></i>(+1)708-495-6977</p>
+
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/sidney-m-wilson/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+
+              <a href="https://github.com/SidKid8/testcode"
+                ><i class="fa-brands fa-github"></i
+              ></a>
             </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
+
+            <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+          </div>
+
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
         </div>
-    </div>
-    <div class="copyright">
-        <p>Copyright © Sidney. Made with <i class="fa-solid fa-heart"></i> & Senzu Beans.</p>
-        <br>
+      </div>
+
+      <div class="copyright">
+        <p>
+          Copyright © Sidney. Made with <i class="fa-solid fa-heart"></i> &
+          Senzu Beans.
+        </p>
         <!---------Visitor  Displpay -------->
-<p class="counter"> There has been <br><span id="api"></span> visitors.</p>
+        <p class="counter">
+          There has been <br /><span id="api"></span> visitors.
+        </p>
+      </div>
     </div>
-</div>
-<!-- ------Submit Message Success-------->
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbws1lQmlTeYPi5gIiDkZz7I5ljvT-Yrz3_9L61jlfL65d7cn2Eu1LEEPx8u3pOLnSjUGQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully."
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-</script>
-<!--------Mobile Tab Script--------->
-<script>
+    <!-- ------Submit Message Success-------->
+    <script>
+      const scriptURL =
+        'https://script.google.com/macros/s/AKfycbws1lQmlTeYPi5gIiDkZz7I5ljvT-Yrz3_9L61jlfL65d7cn2Eu1LEEPx8u3pOLnSjUGQ/exec';
+      const form = document.forms['submit-to-google-sheet'];
+      const msg = document.getElementById('msg');
 
-    var sidemenu = document.getElementById("sidemenu");
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = 'Message sent successfully.';
+            setTimeout(function () {
+              msg.innerHTML = '';
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
+    <!--------Mobile Tab Script--------->
+    <script>
+      var sidemenu = document.getElementById('sidemenu');
 
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
-
-    </body>
+      function openmenu() {
+        sidemenu.style.right = '0';
+      }
+      function closemenu() {
+        sidemenu.style.right = '-200px';
+      }
+    </script>
+  </body>
 </html>
