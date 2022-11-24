@@ -1,30 +1,51 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  ResumeCFN
+  Resume SAM Template
 
-  Sample SAM Template for ResumeCFN
-
-# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
     Timeout: 3
 
 Resources:
-  HelloWorldFunction:
+
+IncrementCounterFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      CodeUri: hello_world/
-      Handler: app.lambda_handler
+      Handler: lambda_function.lambda_handler
       Runtime: python3.9
+      CodeUri: SAMTemplate/
+      Description: Increments DynamoDB Viewer Table
+      MemorySize: 128
+      Timeout: 3
       Architectures:
         - x86_64
-      Events:
-        HelloWorld:
-          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-          Properties:
-            Path: /hello
-            Method: get
+      Policies:
+        - Access_To_DynamoDb_CounterDB:
+            TableName: !Ref resume-visit-stats
+      Metadata:
+        BuildMethod: python3.9
+        
+CountTable:
+  Type: AWS::Serverless::SimpleTable
+  Properties:
+    TableName: resume-visit-stats
+    PrimaryKey:
+      Name: id
+      Type: String
+    ProvisionedThroughput:
+      ReadCapacityUnits: 5
+      WriteCapacityUnits: 5
+        
+SiteVisitAPI:
+  Type: AWS::ApiGateway::RestAPI
+  Properties:
+    StageName: prod
+    DefinitionUrl: ./incrementViewcount-API-prod-oas30.yaml
+    ApiKeySourceType: HEADER
+    Description: API Gateway with a Lambda Integration
+    Name: incrementViewcountAPI
+
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
