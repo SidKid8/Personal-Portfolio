@@ -11,6 +11,7 @@ body {
   background: #080808;
   color: #fff;
   scroll-behavior: smooth;
+  /* overflow-x: hidden; */
 }
 /*------------Nav Container----------------*/
 .container {
@@ -157,12 +158,13 @@ nav ul li a:hover::after {
   font-size: 50px;
   font-weight: 600;
   color: whitesmoke;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .about-me {
-  font-size: 18px;
+  font-size: 19px;
   color: #8db9ea;
+  line-height: 130%;
 }
 /* About Tabs */
 .tab-titles {
@@ -188,6 +190,16 @@ nav ul li a:hover::after {
 }
 .tab-links.active-link:after {
   width: 50%;
+}
+.tab-contents-title {
+  color: #8db9ea;
+  font-size: 25px;
+}
+.tab-contents-date {
+  margin-top: 10px;
+}
+.tab-contents-desc {
+  line-height: 145%;
 }
 .tab-contents ul li {
   list-style: none;
@@ -255,13 +267,22 @@ nav ul li a:hover::after {
 .work-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
+  grid-gap: 35px;
   margin-top: 20px;
 }
 .work {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+}
+.work .first p {
+ font-size: 20px;
+}
+.work .second p {
+ font-size: 19px;
+}
+.work .third p {
+ font-size: 18px;
 }
 .work img {
   width: 100%;
