@@ -196,11 +196,12 @@ nav ul li a:hover::after {
   font-size: 25px;
 }
 .tab-contents-date {
+  font-size: 19px;
   margin-top: 10px;
 }
 .tab-contents-desc {
   line-height: 145%;
-  font-size: 19.5px;
+  font-size: 19px;
 }
 .tab-contents ul li {
   list-style: none;
@@ -208,7 +209,6 @@ nav ul li a:hover::after {
 }
 .tab-contents ul li span {
   color: #8db9ea;
-  font-size: 20px;
 }
 .tab-contents {
   display: none;
