@@ -1,24 +1,32 @@
 name: Pre SAM DEV
 
-# on:
+on:
   push:
     branches:
-    - master
+    - N/A
 
 jobs:
 # Deployment for root domain.
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: jakejarvis/s3-sync-action@master
+    - uses: actions/checkout@prod
+    - uses: actions/setup-python@prod
+    - uses: aws-actions/setup-sam@prod
+    - uses: aws-actions/configure-aws-credentials@prod
       with:
-        args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET1 }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'us-east-2'
+    # sam build 
+    - run: sam build --use-container
+    
+    # Run Unit tests- Specify unit tests here 
+
+    # sam deploy
+    - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name www-*-wilsonwilsonworld-sam-backend --s3-bucket wilsonwilson.world --capabilities CAPABILITY_IAM --region us-east-2
+
+  ###################################################  
   # Deployment for www..
   deploy2:
     runs-on: ubuntu-latest
@@ -26,9 +34,14 @@ jobs:
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
-        args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET2 }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'us-east-2'
+
+        # sam build 
+    - run: sam build --use-container
+    
+    # Run Unit tests- Specify unit tests here 
+
+    # sam deploy
+    - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name www-*-wilsonwilsonworld-sam-backend --s3-bucket www.wilsonwilson.world --capabilities CAPABILITY_IAM --region us-east-2
