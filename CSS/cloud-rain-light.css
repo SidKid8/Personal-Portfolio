@@ -18,18 +18,18 @@
   background-size: cover;
   animation: zoomies 45s infinite linear;
   transition-timing-function: ease-in-out;
-  opacity: 60%;
+  opacity: 70%;
 }
 .cloud.two {
   top: -10%;
   max-width: max-content;
-  max-height: 984px;
+  max-height: 954px;
   display: inherit;
   position: absolute;
   background-size: cover;
-  animation: zoomies 40s infinite linear;
+  animation: zoomies 48s infinite linear;
   transition-timing-function: ease-in-out;
-  opacity: 35%;
+  opacity: 75%;
 }
 .cloud.three {
   top: -10%;
@@ -50,9 +50,9 @@
   display: inherit;
   position: absolute;
   background-size: cover;
-  animation: zoomies 35s infinite linear;
+  animation: zoomies 53s infinite linear;
   transition-timing-function: ease-in-out;
-  opacity: 60%;
+  opacity: 70%;
 }
 @keyframes zoomies {
   from {
@@ -69,7 +69,7 @@
 .rain {
   position: relative;
   display: inherit;
-  top: -343%;
+  top: -130%;
   height: calc(343% + 100vh);
   background-image: url(/images/rain-lightning/rain.png);
   animation: rain 2.9s linear infinite;

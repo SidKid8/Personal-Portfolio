@@ -34,11 +34,11 @@ nav ul li {
   margin: 10px 15px;
 }
 nav ul li a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 25px;
   position: relative;
-  right: 5%;
+  right: 3%;
 }
 nav ul li a::after {
   content: '';
@@ -53,6 +53,7 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
+
 .header-text {
   margin-top: 20%;
   font-size: 30px;
@@ -64,12 +65,8 @@ nav ul li a:hover::after {
 #firstnamecolor {
   display: inline-flex;
   flex-direction: column;
-  color: #0059ff;
+  color: #2b7fdf;
 }
-/* #secondnamecolor {
-  color: #0059ff;
-  margin-left: 198px;
-} */
 
 /* Header Namewrap css */
 /*--------Name Container----------*/
@@ -136,7 +133,9 @@ nav ul li a:hover::after {
 /*---------About---------*/
 #about {
   padding: 0 0;
-  color: #ababab;
+  color: #FFFAE3;
+  text-shadow: 0px 0px 1px whitesmoke;
+
 }
 .row {
   display: flex;
@@ -157,14 +156,16 @@ nav ul li a:hover::after {
 .sub-title {
   font-size: 50px;
   font-weight: 600;
-  color: whitesmoke;
+  color: #8db9ea;
   margin-bottom: 15px;
+  font-family: 'Merienda One', cursive;
 }
 
 .about-me {
   font-size: 19px;
-  color: #8db9ea;
+  color: #FFFAE3 ;
   line-height: 130%;
+  font-family: 'Oxygen Mono', monospace;
 }
 /* About Tabs */
 .tab-titles {
@@ -173,16 +174,17 @@ nav ul li a:hover::after {
 }
 .tab-links {
   margin-right: 50px;
-  font-size: 20px;
+  font-size: 21.75px;
   font-weight: 500;
   cursor: pointer;
   position: relative;
+  font-family: 'Oxygen Mono', monospace;
 }
 .tab-links::after {
   content: '';
   width: 0;
   height: 3px;
-  background: #fffafa;
+  background: #8db9ea;
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -194,14 +196,17 @@ nav ul li a:hover::after {
 .tab-contents-title {
   color: #8db9ea;
   font-size: 25px;
+  font-family: 'Merienda One', cursive;
 }
 .tab-contents-date {
-  font-size: 19px;
+  font-size: 20px;
   margin-top: 10px;
+  font-family: 'Oxygen Mono', monospace;
 }
 .tab-contents-desc {
   line-height: 145%;
   font-size: 19px;
+  font-family: 'Oxygen Mono', monospace;
 }
 .tab-contents ul li {
   list-style: none;
@@ -350,6 +355,10 @@ nav ul li a:hover::after {
 .layer h3 {
   font-weight: 500;
   margin-top: 20px;
+  font-family: 'Merienda One', cursive;
+}
+.layer p {
+  font-family: 'Oxygen Mono', monospace;
 }
 .layer a {
   margin-top: 20px;
@@ -373,7 +382,7 @@ nav ul li a:hover::after {
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid #ff004f;
+  border: 1px solid whitesmoke;
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
@@ -407,7 +416,7 @@ nav ul li a:hover::after {
   margin-top: 30px;
 }
 .contact-left p i {
-  color: #ff004f;
+  color: #2b7fdf;
   margin-right: 15px;
   font-size: 25px;
 }
@@ -423,12 +432,12 @@ nav ul li a:hover::after {
   transition: transform 0.5s;
 }
 .social-icons a:hover {
-  color: #ff004f;
+  color: #2b7fdf;
   transform: translateY(-5px);
 }
 .btn.btn2 {
   display: inline-block;
-  background: #ff004f;
+  background: #2b7fdf;
 }
 .content-right form {
   width: 100%;
@@ -487,10 +496,10 @@ nav .fa-solid {
   }
   .cloud-container {
     pointer-events: none;
-    height: 8px;
-    width: 500px;
+    height: 3px;
+    width: 600px;
     background-repeat: no-repeat;
-    opacity: 60%;
+    opacity: 55%;
   }
   .header-text {
     margin-top: 30%;
@@ -499,17 +508,19 @@ nav .fa-solid {
   .header-text h1 {
     font-size: 25px;
   }
-  #secondnamecolor {
-    color: #0059ff;
-    margin-left: 75px;
-  }
+  
   nav .fa-solid {
     display: block;
     font-size: 30px;
     padding-right: 3%;
   }
+  nav .fa-xmark {
+    margin-left: 25px;
+  }
+
   nav ul {
-    background: skyblue;
+    background: #8db9ea;
+    background-image: url("/images/tower.png");
     position: fixed;
     top: 0;
     right: -100px;
@@ -518,6 +529,7 @@ nav .fa-solid {
     padding-top: 50px;
     z-index: 2;
     transition: right 0.2s;
+    opacity: 90%;
   }
   nav ul li {
     display: block;
