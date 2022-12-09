@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- !hard skills links -->
+
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Oxygen+Mono&display=swap" rel="stylesheet">
 
     <title>Sidney Wilson's Cloud Resume</title>
@@ -337,7 +342,7 @@
     </div>
 
     <!-- !Portfolio----- -->
-    <div id="portfolio">
+    <!-- <div id="portfolio">
       <div class="container">
         <h1 class="sub-title work">My Work</h1>
         <div class="work-list">
@@ -394,10 +399,116 @@
             </div>
           </div>
         </div>
-        <!-- Need link for later. -->
-        <!-- <a href="#" class="btn">See more</a> -->
+      </div>
+    </div> -->
+    <!-- !New work revolver -->
+    <div class ="work-container">
+    <div class="app">
+
+      <div class="cardList">
+        <button class="cardList__btn btn btn--left">
+          <div class="icon">
+            <svg>
+              <use xlink:href="#arrow-left"></use>
+            </svg>
+          </div>
+        </button>
+    
+        <div class="cards__wrapper">
+          <div class="card current--card">
+            <div class="card__image">
+              <img src="/images/work-1.png" alt="" />
+            </div>
+          </div>
+    
+          <div class="card next--card">
+            <div class="card__image">
+              <img src="/images/work-2.png" alt="" />
+            </div>
+          </div>
+    
+          <div class="card previous--card">
+            <div class="card__image">
+              <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+            </div>
+          </div>
+        </div>
+    
+        <button class="cardList__btn btn btn--right">
+          <div class="icon">
+            <svg>
+              <use xlink:href="#arrow-right"></use>
+            </svg>
+          </div>
+        </button>
+      </div>
+    
+      <div class="infoList">
+        <div class="info__wrapper">
+          <div class="info current--info">
+            <h1 class="text name">AWS Architect</h1>
+            <h4 class="text logo">
+              <img src="/images/logos/awslogo.png">
+            </h4>
+            <p class="text description">The mountains are calling</p>
+          </div>
+    
+          <div class="info next--info">
+            <h1 class="text name">Web Developer</h1>
+            <h4 class="text logo">
+              <img src="/images/logos/csslogo.png">
+              <img src="/images/logos/html5logo.png">
+              <img src="/images/logos/jslogo.png">
+            </h4>
+            <p class="text description">Adventure is never far away</p>
+          </div>
+    
+          <div class="info previous--info">
+            <h1 class="text name">Inventory management>
+            <h4 class="text logo">United States</h4>
+            <p class="text description">Let your dreams come true</p>
+          </div>
+        </div>
+      </div>
+    
+    
+      <div class="app__bg">
+        <div class="app__bg__image current--image">
+          <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="AWS Architect Panel" />
+        </div>
+        <div class="app__bg__image next--image">
+          <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="Web Developer Panel" />
+        </div>
+        <div class="app__bg__image previous--image">
+          <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="Inventory Management" />
+        </div>
       </div>
     </div>
+    
+    <div class="loading__wrapper">
+      <div class="loader--text">Loading...</div>
+      <div class="loader">
+        <span></span>
+      </div>
+    </div>
+    
+    
+    <svg class="icons" style="display: none;">
+      <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='328 112 184 256 328 400'
+               style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+      </symbol>
+      <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='184 112 328 256 184 400'
+               style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+      </symbol>
+    </svg>
+    
+    <!-- partial -->
+      <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script><script  src="./JS/work-revolver.JS"></script>
+    
+  </div>
     <!-----------contact--------------->
     <div id="contact">
       <div class="contactme-container">
@@ -419,7 +530,10 @@
               ></a> -->
             </div>
 
-            <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            <a href="images/my-cv.pdf" download class="cv btn2">
+              <span>Click!</span>
+              <span>Download CV</span>
+            </a>
           </div>
 
           <div class="contact-right">
@@ -436,7 +550,9 @@
                 rows="6"
                 placeholder="Your Message"
               ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
+              <button type="submit" class="submit btn2">
+                <span>Submit</span>
+              </button>
             </form>
             <span id="msg"></span>
           </div>

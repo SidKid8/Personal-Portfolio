@@ -3,9 +3,7 @@
 
 // for (const msg of submitmsg){
 
-// }
-
-// import './js/siteapi.js';
+// 
 
 // !works
 import { opentab } from '../JS/tabclick.JS'; 
@@ -19,3 +17,4 @@ for (const tab of allTabs) {
     opentab(evt.target.title);
   });
 }
+
