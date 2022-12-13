@@ -4,6 +4,7 @@
 // for (const msg of submitmsg){
 
 // 
+// import {} from '../JS/tech-comp.JS';
 
 // !works
 import { opentab } from '../JS/tabclick.JS'; 

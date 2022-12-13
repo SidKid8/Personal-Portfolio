@@ -1,14 +1,14 @@
-  
-  .app {
-    min-width: 100vw;
-    min-height: 100vh;
+/* 
+  #skill_scroll {
+    min-width: 200px;
+    min-height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: blue;
   }
-  
-  header {
+   header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,4 +82,4 @@
     100% {
       transform: translateX(-50%);
     }
-  }
+  } */

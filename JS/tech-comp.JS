@@ -26,9 +26,9 @@ React.createElement("div", { className: "tag", style: { '--color': color } }, /*
 
 
 const App = () => /*#__PURE__*/
-React.createElement("div", { className: "app" }, /*#__PURE__*/
+React.createElement("div", { className: "skill_scroll" }, /*#__PURE__*/
 React.createElement("header", null, /*#__PURE__*/
-React.createElement("h1", null, "Techniacl Compotencies"), /*#__PURE__*/
+React.createElement("h1", null, "Technical Compotencies"), /*#__PURE__*/
 React.createElement("p", null, "CSS only, content independent, bi-directional, customizable")), /*#__PURE__*/
 
 React.createElement("div", { className: "tag-list" },
@@ -46,4 +46,5 @@ React.createElement("div", { className: "fade" })));
 
 ReactDOM.render( /*#__PURE__*/
 React.createElement(App, null),
-document.body);
+document.skill_scroll);
+

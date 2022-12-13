@@ -1,6 +1,7 @@
 @import '/CSS/cloud-rain-light.css';
 @import '/CSS/contact-copyright.css';
 @import '/CSS/work-revolver.css';
+@import '/CSS/tech-comp.css';
 /* Full Body */
 * {
   margin: 0;
@@ -13,7 +14,7 @@ body {
   background: #080808;
   color: #fff;
   scroll-behavior: smooth;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 /*------------Nav Container----------------*/
@@ -26,7 +27,7 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.logo {
+.main_logo {
   display: inherit;
   width: 100px;
   height: 100px;
@@ -42,6 +43,7 @@ nav ul li a {
   font-size: 25px;
   position: relative;
   right: 3%;
+  font-family: 'Oxygen Mono', monospace;
 }
 nav ul li a::after {
   content: '';
@@ -58,27 +60,28 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-  margin-top: 20%;
+  margin-top: 33%;
   font-size: 30px;
 }
 .header-text h1 {
   font-size: 60px;
   margin-top: 20px;
+  font-family: 'Special Elite', cursive;
 }
 #firstnamecolor {
   display: inline-flex;
   flex-direction: column;
   color: #2b7fdf;
+  font-family: 'Special Elite', cursive;
 }
 
-/* Header Namewrap css */
-/*--------Name Container----------*/
+/*--------Header Container----------*/
 #header {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 100vw;
-  height: 975px;
+  height: 955px;
   background-image: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
@@ -105,6 +108,8 @@ nav ul li a:hover::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Special Elite', cursive;
+
 }
 #header .word-wrap {
   animation: titleflip 8s ease-in-out infinite;
@@ -138,7 +143,6 @@ nav ul li a:hover::after {
   padding: 0 0;
   color: #FFFAE3;
   text-shadow: 0px 0px 1px whitesmoke;
-
 }
 .row {
   display: flex;
@@ -173,7 +177,7 @@ nav ul li a:hover::after {
 /* About Tabs */
 .tab-titles {
   display: flex;
-  margin: 20px 0 40px;
+  margin: 23px 0 28px;
 }
 .tab-links {
   margin-right: 50px;
@@ -228,47 +232,6 @@ nav ul li a:hover::after {
   font-size: 18px;
   color: #fffafa;
 }
-/* !Skill Icons/Logos */
-.hard-skills {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 2vw;
-  row-gap: 2vh;
-  align-items: center;
-  justify-content: center;
-}
-.hard-skills > li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.5s ease;
-  filter: grayscale(1);
-  position: relative;
-  z-index: 0;
-}
-.hard-skills > li:hover {
-  transform: scale(1.1);
-  filter: grayscale(0);
-  cursor: default;
-}
-.hard-skills img {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-
-  height: 100px;
-  width: 100px;
-
-  overflow: hidden;
-}
-
-.hard-skills__icon-inner {
-  max-width: 100%;
-  max-height: 100%;
-}
-
 /*-------Portfolio-----------*/
 #portfolio {
   padding: 30px 0;
@@ -300,87 +263,7 @@ nav ul li a:hover::after {
   display: block;
   transition: transform 0.5s;
 }
-/* --------Different 'My Work'  Layers-------- */
-.layer.first {
-  width: 100%;
-  height: 0%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #efbdc1);
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  font-size: 25px;
-  transition: height 0.5s;
-}
-.layer.second {
-  width: 100%;
-  height: 0%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #a7906f);
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  font-size: 25px;
-  transition: height 0.5s;
-}
-.layer.third {
-  width: 100%;
-  height: 0%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #03a5bc);
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  font-size: 25px;
-  transition: height 0.5s;
-}
-.layer h3 {
-  font-weight: 500;
-  margin-top: 20px;
-  font-family: 'Merienda One', cursive;
-}
-.layer p {
-  font-family: 'Oxygen Mono', monospace;
-}
-.layer a {
-  margin-top: 20px;
-  color: #ff004f;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 60px;
-  background: #fff;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  text-align: center;
-}
-.work:hover img {
-  transform: scale(1.1);
-}
-.work:hover .layer {
-  height: 100%;
-}
+
 
 /* !All css for small screeens below -----------*/
 @media only screen and (max-width: 600px) {
@@ -395,21 +278,24 @@ nav ul li a:hover::after {
       url(/images/bg.png);
     background-size: cover;
   }
-  .cloud-container {
-    pointer-events: none;
-    height: 3px;
-    width: 600px;
-    background-repeat: no-repeat;
-    opacity: 55%;
+  #header .wrapper {
+    display: inline-flex;
+    width: max-content;
+    font-weight: 550;
+    color: #ffffff;
+    overflow: hidden;
   }
   .header-text {
     margin-top: 30%;
     font-size: 16px;
   }
   .header-text h1 {
-    font-size: 25px;
+    font-size: 38px;
   }
   
+  #sidemenu {
+    right: -200px;
+  }
   nav .fa-solid {
     display: block;
     font-size: 30px;
@@ -418,7 +304,6 @@ nav ul li a:hover::after {
   nav .fa-xmark {
     margin-left: 25px;
   }
-
   nav ul {
     background: #8db9ea;
     background-image: url("/images/tower.png");
@@ -442,12 +327,6 @@ nav ul li a:hover::after {
     left: 25px;
     cursor: pointer;
   }
-  #sidemenu {
-    right: -200px;
-  }
-  .rain {
-    top: -1800%;
-  }
   .sub-title {
     font-size: 40px;
   }
@@ -465,21 +344,5 @@ nav ul li a:hover::after {
     font-size: 16px;
     margin-right: 20px;
   }
-  .contact-left,
-  .contact-right {
-    flex-basis: 100%;
-  }
-  .copyright {
-    font-size: 14px;
-  }
-  /* Media Screen Text Wrapper */
-  #header .wrapper {
-    display: inline-flex;
-    width: max-content;
-    font-family: sans-serif;
-    font-weight: 550;
-    color: #ffffff;
-    overflow: hidden;
-  }
-  /* end media query */
 }
+/* end media query */

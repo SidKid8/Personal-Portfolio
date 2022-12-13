@@ -4,7 +4,7 @@
   }
   .contact-left {
     flex-basis: 35%;
-    margin-left: 15px;
+    margin: 0 0 10px 15px;
   }
   .contact-left h1 {
     font-size: 50px;
@@ -14,20 +14,21 @@
   }
   .contact-left p {
     font-size: 20px;
+    margin: 25px 0;
+  }
+  .contact-left p i {
+    color: #2b7fdf;
+    margin: 0 15px 0 0;
+    font-size: 25px;
   }
   .contact-right {
     flex-basis: 60%;
   }
-  .contact-left p {
-    margin-top: 30px;
-  }
-  .contact-left p i {
-    color: #2b7fdf;
-    margin-right: 15px;
-    font-size: 25px;
+  .content-right form {
+    width: 100%;
   }
   .social-icons {
-    margin-top: 30px;
+    margin: 15px 0;
   }
   .social-icons a {
     text-decoration: none;
@@ -42,9 +43,6 @@
     transform: translateY(-5px);
   }
   
-  .content-right form {
-    width: 100%;
-  }
   form input,
   form textarea {
     width: 100%;
@@ -85,7 +83,7 @@
      7px 7px 20px 0px rgba(0,0,0,.1),
      4px 4px 5px 0px rgba(0,0,0,.1);
     border-radius: 5px;
-    margin:0;
+    margin: 0;
     text-align: center;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -184,4 +182,20 @@
   /* Hidden mobile tab icon */
   nav .fa-solid {
     display: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+  
+    .cv.btn2 {
+      margin: 10px 0 50px 0;
+    }
+  
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+    }
+    
+  .copyright {
+    font-size: 14px;
+    }
   }

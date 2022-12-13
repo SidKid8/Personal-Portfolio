@@ -4,21 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+<!-- !Google fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Oxygen+Mono&family=Special+Elite&display=swap" rel="stylesheet">
 
-    <!-- !hard skills links -->
-
-
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Oxygen+Mono&display=swap" rel="stylesheet">
-
-    <title>Sidney Wilson's Cloud Resume</title>
+    <title>Sidney Wilson's Cloud Resume Challenge
+    </title>
     <link rel="stylesheet" href="/CSS/style.css" />
     <script
       src="https://kit.fontawesome.com/1bbcfc5787.js"
       crossorigin="anonymous"
     ></script>
     <script src="./JS/main.JS" type="module"></script>
+    
     <!-- !Fetch Visitor Api -->
     <script type="text/javascript">
       var apiUrl =
@@ -38,7 +36,7 @@
     <div id="header">
       <div class="container">
         <nav>
-          <div class="logo">
+          <div class="main_logo">
             <img src="/images/logo.png" alt="Wilson World Logo"/>
           </div>
           <ul id="sidemenu">
@@ -266,143 +264,16 @@
     </div>
 
     <!-- !Skill Icons/Logos -->
-    <div class="skillcontainer">
-      <div class="container">
-        <h1 class="sub-title techtree">Technical Competencies</h1>
-        <div class="resume-item__list">
-          <ul class="resume-item__list-items hard-skills">
-            <li>
-              <div class="hard-skills__icon">
-                <img
-                  src="/images/logos/csslogo.png"
-                  alt="CSS Skill Logo"
-                  class="hard-skills__icon-inner"
-                />
-              </div>
-              CSS
-            </li>
+    
+    <div id="skill_scroll"></div>
 
-            <li>
-              <div class="hard-skills__icon">
-                <img
-                  src="/images/logos/gitlogo.png"
-                  alt="GIT Skill Logo"
-                  class="hard-skills__icon-inner"
-                />
-              </div>
-              GitHub
-            </li>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="/JS/tech-comp.JS"></script>
 
-            <li>
-              <div class="hard-skills__icon">
-                <img
-                  src="/images/logos/html5logo.png"
-                  alt="HTML Skill Logo"
-                  class="hard-skills__icon-inner"
-                />
-              </div>
-              HTML
-            </li>
 
-            <li>
-              <div class="hard-skills__icon">
-                <img
-                  src="/images/logos/awslogo.png"
-                  alt="AWS Skill Logo"
-                  class="hard-skills__icon-inner"
-                />
-              </div>
-              AWS
-            </li>
-
-            <li>
-              <div class="hard-skills__icon">
-                <img
-                  src="/images/logos/javalogo.png"
-                  alt="Java Skill Logo"
-                  class="hard-skills__icon-inner"
-                />
-              </div>
-              Java
-            </li>
-
-            <li>
-              <div class="hard-skills__icon">
-                <img
-                  src="/images/logos/vscodelogo.png"
-                  alt="Skill Logo"
-                  class="hard-skills__icon-inner"
-                />
-              </div>
-              VSCode
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- !Portfolio----- -->
-    <!-- <div id="portfolio">
-      <div class="container">
-        <h1 class="sub-title work">My Work</h1>
-        <div class="work-list">
-          <div class="work">
-            <img src="images/work-1.png" />
-            <div class="layer first">
-              <h3>Cloud Architect</h3>
-              <p>
-                Building and maintaining the cloud systems at our organization, along with
-                managing servers, storage, and our network. Ultimately, you will
-                work with various IT teams to ensure our online capabilities
-                meet the needs of our organization.
-              </p>
-
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="work">
-            <img src="images/work-2.png" />
-            <div class="layer second">
-              <h3>Web Development</h3>
-              <p>
-                The web developer is responsible for planning and developing
-                software solutions and web applications, supporting and
-                maintaining a company's websites and digital products. The
-                day-to-day work of the web developer highly depends on
-                constantly evolving internet innovations.
-              </p>
-
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="work">
-            <img src="images/work-3.png" />
-            <div class="layer third">
-              <h3>Stock & Inventory Management</h3>
-              <p>
-                Inventory managers oversee the inventory levels of businesses.
-                They lead a team of inventory or warehouse employees to receive
-                and record new stock as its delivered and shipped out. Their
-                duties include recording daily deliveries, evaluating new
-                shipments, and analyzing different suppliers.
-              </p>
-
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <!-- !New work revolver -->
-    <div class ="work-container">
+  <div class = "work-container" id="portfolio">
     <div class="app">
 
       <div class="cardList">
@@ -429,7 +300,7 @@
     
           <div class="card previous--card">
             <div class="card__image">
-              <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+              <img src="/images/work-3.png" alt="" />
             </div>
           </div>
         </div>
@@ -450,27 +321,27 @@
             <h4 class="text logo">
               <img src="/images/logos/awslogo.png">
             </h4>
-            <p class="text description">The mountains are calling</p>
+            <p class="text description">"If you spend too much time thinking about a thing, you’ll never get it done." ~ Bruce Lee
+            </p>
           </div>
     
           <div class="info next--info">
             <h1 class="text name">Web Developer</h1>
             <h4 class="text logo">
               <img src="/images/logos/csslogo.png">
-              <img src="/images/logos/html5logo.png">
               <img src="/images/logos/jslogo.png">
+              <img src="/images/logos/html5logo.png">
             </h4>
             <p class="text description">Adventure is never far away</p>
           </div>
     
           <div class="info previous--info">
-            <h1 class="text name">Inventory management>
+            <h1 class="text name">Inventory management</h1>
             <h4 class="text logo">United States</h4>
-            <p class="text description">Let your dreams come true</p>
+            <p class="text description">A good systen shortens the road to the goal.</p>
           </div>
         </div>
       </div>
-    
     
       <div class="app__bg">
         <div class="app__bg__image current--image">
@@ -491,8 +362,7 @@
         <span></span>
       </div>
     </div>
-    
-    
+        
     <svg class="icons" style="display: none;">
       <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
         <polyline points='328 112 184 256 328 400'
@@ -505,10 +375,10 @@
     </svg>
     
     <!-- partial -->
-      <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+    <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script><script  src="./JS/work-revolver.JS"></script>
     
-  </div>
+    </div>
     <!-----------contact--------------->
     <div id="contact">
       <div class="contactme-container">
@@ -525,10 +395,10 @@
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
 
-              <!-- <a href="https://github.com/SidKid8/testcode"
+              <a href="https://github.com/SidKid8/testcode"
                 ><i class="fa-brands fa-github"></i
-              ></a> -->
-            </div>
+              ></a>
+    </div>
 
             <a href="images/my-cv.pdf" download class="cv btn2">
               <span>Click!</span>

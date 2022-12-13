@@ -119,3 +119,17 @@
     opacity: 0;
   }
 }
+
+@media only screen and (max-width: 600px) {
+.cloud-container {
+  pointer-events: none;
+  height: 3px;
+  width: 600px;
+  background-repeat: no-repeat;
+  opacity: 55%;
+  }
+  
+  .rain {
+    top: -1800%;
+  }
+}
