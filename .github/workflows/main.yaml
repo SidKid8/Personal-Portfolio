@@ -3,7 +3,8 @@ name: Pre SAM DEV
 on:
   push:
     branches:
-    - master
+    - resu-dev
+
 
 jobs:
 # Deployment for root domain.
