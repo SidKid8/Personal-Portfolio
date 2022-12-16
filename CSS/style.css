@@ -237,7 +237,7 @@ nav ul li a:hover::after {
 /* !All css for small screeens below -----------*/
 @media only screen and (max-width: 600px) {
   #header {
-    max-height: 790px;
+    max-height: 780px;
     background-image: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0) 0%,
@@ -247,6 +247,9 @@ nav ul li a:hover::after {
       url(/images/bg.png);
     background-size: cover;
   }
+  .main_logo{
+    padding: 0 0 0 5%;
+  }
   #header .wrapper {
     display: inline-flex;
     width: max-content;
@@ -255,20 +258,22 @@ nav ul li a:hover::after {
     overflow: hidden;
   }
   .header-text {
-    margin-top: 30%;
+    margin: 45% 0 0 5%;
     font-size: 16px;
   }
   .header-text h1 {
     font-size: 38px;
   }
-  
+  .container{
+    padding: 3% 0 0 0;
+  }
   #sidemenu {
     right: -200px;
   }
   nav .fa-solid {
     display: block;
     font-size: 30px;
-    padding-right: 3%;
+    padding: 0 8.5% 0 0;
   }
   nav .fa-xmark {
     margin-left: 25px;

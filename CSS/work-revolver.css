@@ -23,6 +23,7 @@ button:focus {
 	align-items: center;
 	overflow: hidden;
   pointer-events: none;
+  padding: 2% 0 0 0;
   background: radial-gradient(ellipse at 50% 125%,#10519b, #1c2e42, #080808);
 }
 .app {
@@ -204,6 +205,7 @@ button:focus {
   white-space: nowrap;
   color: whitesmoke;
   width: fit-content;
+  text-shadow: 0px 0px 2px black;
   font-family: 'Oxygen Mono', monospace;
 }
 .info .name{
