@@ -139,6 +139,11 @@ nav ul li a:hover::after {
 }
 
 /*---------About---------*/
+#about {
+  padding: 0 0;
+  color: #FFFAE3;
+  text-shadow: 0px 0px 1px whitesmoke;
+}
 .row {
   display: flex;
   justify-content: space-between;
@@ -169,12 +174,7 @@ nav ul li a:hover::after {
   line-height: 130%;
   font-family: 'Oxygen Mono', monospace;
 }
-#about {
-  padding: 0 0;
-  color: #FFFAE3;
-  text-shadow: 0px 0px 1px whitesmoke;
-}
-
+/* About Tabs */
 .tab-titles {
   display: flex;
   margin: 23px 0 28px;
@@ -231,6 +231,37 @@ nav ul li a:hover::after {
 .tab-contents ul {
   font-size: 18px;
   color: #fffafa;
+}
+/*-------Portfolio-----------*/
+#portfolio {
+  padding: 30px 0;
+}
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 35px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work .first p {
+ font-size: 20px;
+}
+.work .second p {
+ font-size: 19px;
+}
+.work .third p {
+ font-size: 18px;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
 }
 
 

@@ -11,19 +11,18 @@ const TAGS = [
   'HTML',
   'CSS',
   'JavaScript',
-  'Typescript',
-  'Tailwind',
+  'Svelte',
+  'Java',
+  'CleanCode',
   'React',
-  'Next.js',
-  'Gatsby',
-  'UI/UX',
-  'SVG',
-  'animation',
-  'webdev',
+  'AWS',
+  'WebDev',
+  'Figma',
+  'UI/UX'
 ];
-const DURATION = 15000;
+const DURATION = 22000;
 const ROWS = 5;
-const TAGS_PER_ROW = 5;
+const TAGS_PER_ROW = 10;
 
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -52,16 +51,16 @@ const Tag = ({ text, color }) => (
 );
 
 const App = () => (
-  <div className='app'>
+  <div className='skill_app'>
     <header>
-      <h1>Infinite Scroll Animation</h1>
-      <p>CSS only, content independent, bi-directional, customizable</p>
+      <h1>Technical Competencies</h1>
+      <p>"If you do things right, people won't be sure you've done anything at all"</p>
     </header>
     <div className='tag-list'>
       {[...new Array(ROWS)].map((_, i) => (
         <InfiniteLoopSlider
           key={i}
-          duration={random(DURATION - 5000, DURATION + 5000)}
+          duration={random(DURATION - 9000, DURATION + 9000)}
           reverse={i % 2}
         >
           {shuffle(TAGS)
@@ -71,7 +70,7 @@ const App = () => (
             ))}
         </InfiniteLoopSlider>
       ))}
-      <div className='fade' />
+      
     </div>
   </div>
 );
