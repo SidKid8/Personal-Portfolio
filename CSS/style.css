@@ -2,6 +2,8 @@
 @import '/CSS/contact-copyright.css';
 @import '/CSS/work-revolver.css';
 @import '/CSS/tech-comp.css';
+@import '/CSS/bento-box.css';
+
 /* Full Body */
 * {
   margin: 0;
@@ -21,21 +23,21 @@ body {
 .container {
   padding: 10px 20px;
 }
+.main_logo {
+  display: inherit;
+  width: 100px;
+  height: 100px;
+}
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.main_logo {
-  display: inherit;
-  width: 100px;
-  height: 100px;
-}
 nav ul li {
   display: inline-block;
   list-style: none;
-  margin: 10px 15px;
+  margin: 10px 20px;
 }
 nav ul li a {
   color: white;
@@ -58,7 +60,9 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
-
+.bento__wrapper{
+  display: none;
+}
 .header-text {
   margin-top: 33%;
   font-size: 30px;
@@ -164,7 +168,7 @@ nav ul li a:hover::after {
 }
 
 .about-me {
-  font-size: 19px;
+  font-size: 1.2rem;
   color: #FFFAE3 ;
   line-height: 130%;
   font-family: 'Oxygen Mono', monospace;
@@ -248,7 +252,7 @@ nav ul li a:hover::after {
     background-size: cover;
   }
   .main_logo{
-    padding: 0 0 0 5%;
+    padding: 0 0 0 6%;
   }
   #header .wrapper {
     display: inline-flex;
@@ -270,6 +274,7 @@ nav ul li a:hover::after {
   #sidemenu {
     right: -200px;
   }
+
   nav .fa-solid {
     display: block;
     font-size: 30px;
@@ -277,6 +282,11 @@ nav ul li a:hover::after {
   }
   nav .fa-xmark {
     margin-left: 25px;
+  }
+  nav .bento__wrapper{
+    display: block;
+    font-size: 30px;
+    padding: 0 0 0 35%;
   }
   nav ul {
     background: #8db9ea;

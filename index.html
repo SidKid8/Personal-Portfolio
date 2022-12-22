@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Sidney Wilson's Cloud Resume Challenge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    
+    <script
+      src="https://kit.fontawesome.com/1bbcfc5787.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/main.JS" type="module"></script>
+
     <!-- !Google fonts Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,14 +24,7 @@
       rel="stylesheet"
     />
 
-    <title>Sidney Wilson's Cloud Resume Challenge</title>
-    <link rel="stylesheet" href="/CSS/style.css" />
-    <script
-      src="https://kit.fontawesome.com/1bbcfc5787.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./JS/main.JS" type="module"></script>
-
+    
     <!-- !Fetch Visitor Api -->
     <script type="text/javascript">
       var apiUrl =
@@ -50,7 +54,21 @@
             <li><a href="#contact">Contact</a></li>
             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+          <div class="bento__wrapper" onclick="openmenu()">
+            <div class="menu__item--bento">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+          </div>
+          <!-- <i class="fa-solid fa-bars" onclick="openmenu()"></i> -->
         </nav>
         <!-- !End Cloud Animation Div -->
         <div class="header-text">
@@ -116,7 +134,7 @@
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
             <p class="about-me">
-              A higihly oragnized and versatile computer engineer with 6 years of experience in maintaining hardware and troubleshooting. 
+              A higly oragnized and versatile computer engineer with 6 years of experience in maintaining hardware and troubleshooting. 
               Sid is an independent, compassionate, and dependable leader curating effective opportunities for his fellow associates and the community.
             </p>
 
@@ -449,8 +467,11 @@
             </div>
 
             <a href="images/my-cv.pdf" download class="cv btn2">
-              <span>Click!</span>
-              <span>Download CV</span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Download CV
             </a>
           </div>
 
@@ -470,7 +491,13 @@
                 required
               ></textarea>
               <button type="submit" class="submit btn2">
-                <span>Submit</span>
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Submit
+                </a>
               </button>
             </form>
             <span id="msg"></span>
@@ -520,5 +547,6 @@
         sidemenu.style.right = '-200px';
       }
     </script>
+  
   </body>
 </html>
