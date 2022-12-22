@@ -10,4 +10,3 @@ for (const tab of allTabs) {
     opentab(evt.target.title);
   });
 }
-

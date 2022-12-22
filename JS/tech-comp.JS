@@ -20,18 +20,7 @@ const TAGS = [
   'Figma',
   'UI/UX',
   'Markdown',
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'Svelte',
-  'Java',
-  'CleanCode',
-  'React',
-  'AWS',
-  'WebDev',
-  'Figma',
-  'UI/UX',
-  'Markdown'
+  'SVG'
 ];
 const DURATION = 22000;
 const ROWS = 5;

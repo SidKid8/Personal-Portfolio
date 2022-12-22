@@ -5,7 +5,6 @@
   --card-transition-duration: 800ms;
   --card-transition-easing: ease;
 }
-
 button {
   border: none;
   background: none;
@@ -23,7 +22,7 @@ button:focus {
 	align-items: center;
 	overflow: hidden;
   pointer-events: none;
-  padding: 2% 0 0 0;
+  padding: 1% 0 0 0;
   background: radial-gradient(ellipse at 50% 125%,#10519b, #1c2e42, #080808);
 }
 .app {
