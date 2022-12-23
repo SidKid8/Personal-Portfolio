@@ -4,28 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/style.css" />
 
     <title>Sidney Wilson's Cloud Resume Challenge</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'>
-    <link rel="stylesheet" href="/CSS/style.css" />
-    
-    <script
+    <!-- Font Aweseome Icons -->
+    <script 
       src="https://kit.fontawesome.com/1bbcfc5787.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script src="./JS/main.JS" type="module"></script>
 
-    <!-- !Google fonts Links -->
+    <!-- Google fonts Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Oxygen+Mono&family=Special+Elite&display=swap"
-      rel="stylesheet"
-    />
-
-    
-    <!-- !Fetch Visitor Api -->
+      rel="stylesheet"/>
+    <!-- AWS Visitor Api -->
     <script type="text/javascript">
       var apiUrl =
         'https://31jvx8tdp2.execute-api.us-east-1.amazonaws.com/prod/incrementViewcount';
@@ -39,9 +33,7 @@
     </script>
   </head>
 
-
   <body>
-    <!-- !Header Div -->
     <div id="header">
       <div class="container">
         <nav>
@@ -49,11 +41,11 @@
             <img src="/images/logo.png" alt="Wilson World Logo" />
           </div>
           <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            <li><a href="#header" aria-label="Home Navigation">Home</a></li>
+            <li><a href="#about" aria-label="About Navigation">About</a></li>
+            <li><a href="#skill_scroll" aria-label="Portfolio Navigation">Portfolio</a></li>
+            <li><a href="#contact" aria-label="Contact Navigation">Contact</a></li>
+            <i class="fa-solid fa-xmark" al="Exit Mobile Nav Menu" onclick="closemenu()"></i>
           </ul>
 
           <div class="bento__wrapper" onclick="openmenu()">
@@ -69,9 +61,8 @@
               <div class="box"></div>
             </div>
           </div>
-          <!-- <i class="fa-solid fa-bars" onclick="openmenu()"></i> -->
         </nav>
-        <!-- !End Cloud Animation Div -->
+
         <div class="header-text">
           <h1>
             Hi, I'm <span id="firstnamecolor">Sidney Wilson</span> the
@@ -84,7 +75,6 @@
                 <li>Discoverer.</li>
               </ul>
             </div>
-            <!-- <span id="secondnamecolor">Wilson</span> -->
           </h1>
         </div>
       </div>
@@ -122,6 +112,12 @@
           <img src="images/cloudpics/cloud3.png" alt="" />
         </div>
       </div>
+        <a href="#about" aria-label="Wheel Scroll to About">
+          <span>
+          Animated Scroller
+          </span>
+            <div class="scroll-down"></div>
+        </a>
     </div>
 
 <main>
@@ -285,10 +281,8 @@
       </div>
     </div>
 
-    <!-- !Skill Icons/Logos -->
-
-    <div id="skill_scroll" id="portfolio"></div>
-
+    <!-- Skill Icons/Logos -->
+    <div id="skill_scroll" ></div>
     <script
       src="https://unpkg.com/react@18/umd/react.development.js"
       crossorigin
@@ -300,7 +294,7 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src="/JS/tech-comp.JS" type="text/babel"></script>
 
-    <!-- !New work revolver -->
+    <!-- Work Revolver -->
     <div class="work-container">
       <div class="app">
         <div class="cardList">
@@ -443,7 +437,7 @@
       <script src="./JS/work-revolver.JS"></script>
     </div>
 </main>
-    <!-----------contact--------------->
+    <!-----------Contact--------------->
     <div id="contact">
       <div class="contactme-container">
         <div class="row">
@@ -460,21 +454,24 @@
 
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/sidney-m-wilson/"
-                ><i class="fa-brands fa-linkedin" aria-label="LinkedIn Logo"></i
+              aria-label="Link To LinkedIn Profile"
+                ><i class="fa-brands fa-linkedin" alt="LinkedIn Logo"></i
               ></a>
 
               <a href="https://github.com/SidKid8/testcode"
-                ><i class="fa-brands fa-github" aria-label="GitHub Logo"></i
+              aria-label="Link To Test Code GitHub"
+                ><i class="fa-brands fa-github" alt="GitHub Logo"></i
               ></a>
             </div>
-
-            <a href="images/my-cv.pdf" download class="cv btn2">
+          <button class="cv btn2">
+            <a href="images/my-cv.pdf" download>
               <span></span>
               <span></span>
               <span></span>
               <span></span>
               Download CV
             </a>
+          </button>
           </div>
 
           <div class="contact-right">
@@ -493,7 +490,7 @@
                 required
               ></textarea>
               <button type="submit" class="submit btn2">
-                <a href="#">
+                <a>
                   <span></span>
                   <span></span>
                   <span></span>

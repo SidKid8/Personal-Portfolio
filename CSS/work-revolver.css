@@ -222,7 +222,7 @@ button:focus {
   margin: 25px 0 0 0 ;
 }
 .info .logo {
-  --mg-left: 40px;
+  --mg-left: 78px;
   --text-size-offset: 0.12;
   font-weight: 600;
   margin-left: var(--mg-left);

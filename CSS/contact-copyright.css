@@ -57,6 +57,7 @@
     color: #fff;
     font-size: 18px;
     border-radius: 6px;
+    resize: none;
   }
   form .btn2 {
     padding: 10px 10px;
@@ -65,10 +66,10 @@
     cursor: pointer;
   }
   /* !resume button */
-  .cv.btn2 {
+  .cv.btn2 a {
     position: relative;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 15px;
     color: #03e9f4;
     font-size: 16px;
     text-decoration: none;
@@ -286,7 +287,6 @@
     padding: 25px;
     background: #262626;
     font-weight: 300;
-    margin-top: 20px;
   }
   .copyright i {
     color: #ff004f;

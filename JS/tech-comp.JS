@@ -22,9 +22,9 @@ const TAGS = [
   'Markdown',
   'SVG'
 ];
-const DURATION = 22000;
+const DURATION = 50000;
 const ROWS = 5;
-const TAGS_PER_ROW = 10;
+const TAGS_PER_ROW = 25;
 
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -76,5 +76,6 @@ const App = () => (
     </div>
   </div>
 );
+ReactDOM.createRoot(document.getElementById('skill_scroll')).render(<App />);
 
-ReactDOM.render(<App />, document.getElementById('skill_scroll'));
+// ReactDOM.render(<App />, document.getElementById('skill_scroll'));

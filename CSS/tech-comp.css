@@ -56,7 +56,8 @@ header p {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: var(--direction);
-  animation-duration: var(--duration);
+  /* animation-duration: var(--duration); */
+  animation-duration: 61s;
 }
 
 .tag {
@@ -78,10 +79,8 @@ header p {
 }
 
 @keyframes loop {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% {transform: translateX(100%);
+    -webkit-transform: translateX(100%);}
+  100% {transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);}
 }
