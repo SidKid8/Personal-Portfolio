@@ -160,7 +160,7 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 2% 0 6.9% 0;
+  padding: 2% 0 6.1% 0;
 }
 .about-col-1 {
   flex-basis: 34%;

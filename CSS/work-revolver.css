@@ -161,6 +161,7 @@ button:focus {
   --card-rotation-offset: var(--current-card-rotation-offset);
   --card-scale-offset: 1.2;
   --opacity: 0.8;
+  
 }
 .card.previous--card {
   --card-translateX-offset: calc(-1 * var(--card-width) * 1.1);
@@ -202,9 +203,8 @@ button:focus {
   position: relative;
   font-size: calc(var(--card-width) * var(--text-size-offset, 0.185));
   white-space: nowrap;
-  color: whitesmoke;
   width: fit-content;
-  text-shadow: 0px 0px 2px black;
+  text-shadow: 0px 0px 5px white;
   font-family: 'Oxygen Mono', monospace;
 }
 .info .name{
@@ -249,8 +249,9 @@ button:focus {
 .info .description {
   --text-size-offset: 0.065;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 30px;
   white-space: normal;
+  color: #080808;
 }
 .info.current--info {
   opacity: 1;

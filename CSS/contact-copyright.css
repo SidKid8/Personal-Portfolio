@@ -1,4 +1,3 @@
-/* !Contact Me & Copyright */
 .contactme-container {
     padding: 20px 20px;
   }
@@ -170,7 +169,6 @@
     }
   } 
   
-/* !submit button */
 .submit.btn2 a {
   position: relative;
   display: inline-block;
@@ -184,7 +182,6 @@
   transition: .5s;
   letter-spacing: 4px;
 }
-
 .submit.btn2 a:hover {
   background: #03e9f4;
   color: #fff;
@@ -194,12 +191,10 @@
               0 0 50px #03e9f4,
               0 0 100px #03e9f4;
 }
-
 .submit.btn2 a span {
   position: absolute;
   display: block;
 }
-
 .submit.btn2 a span:nth-child(1) {
   top: 0;
   left: -100%;
@@ -208,7 +203,6 @@
   background: linear-gradient(90deg, transparent, #03e9f4);
   animation: btn-anim1 1s linear infinite;
 }
-
 @keyframes btn-anim1 {
   0% {
     left: -100%;
@@ -275,7 +269,7 @@
   }
 }
 
-  /* !Submit Message css */
+  /* Submit Message */
   #msg {
     color: #61b752;
     margin-top: -40px;

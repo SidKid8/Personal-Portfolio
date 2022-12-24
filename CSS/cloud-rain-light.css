@@ -4,7 +4,6 @@
   width: 100%;
   background-repeat: no-repeat;
   opacity: 75%;
-  /* background-color: red; */
   position: absolute;
   top: 0;
 }
@@ -41,6 +40,7 @@
   animation: zoomies 55s infinite linear;
   transition-timing-function: ease-in-out;
   opacity: 60%;
+  background-color: blue;
 }
 .cloud.four {
   top: -25%;
@@ -50,7 +50,7 @@
   display: inherit;
   position: absolute;
   background-size: cover;
-  animation: zoomies 53s infinite linear;
+  animation: zoomies 50s infinite linear;
   transition-timing-function: ease-in-out;
   opacity: 70%;
 }
