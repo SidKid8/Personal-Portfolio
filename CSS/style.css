@@ -1,5 +1,5 @@
 @import '/CSS/cloud-rain-light.css';
-@import '/CSS/contact-copyright.css';
+@import '/CSS/contact-copyright copy.css';
 @import '/CSS/projects.css';
 @import '/CSS/tech-comp.css';
 @import '/CSS/bento-box.css';
@@ -35,10 +35,10 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-nav ul{
+nav ul {
   background: hsl(0 0% 0% / 0.65);
 }
-@supports (backdrop-filter: blur(1.5rem)){
+@supports (backdrop-filter: blur(1.5rem)) {
   nav ul {
     background: hsl(0 0% 0% / 0.1);
     backdrop-filter: blur(1rem);
@@ -70,7 +70,7 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
-.bento__wrapper{
+.bento__wrapper {
   display: none;
 }
 .header-text {
@@ -123,7 +123,6 @@ nav ul li a:hover::after {
   flex-direction: column;
   justify-content: center;
   font-family: 'Special Elite', cursive;
-
 }
 #header .word-wrap {
   animation: titleflip 8s ease-in-out infinite;
@@ -151,7 +150,7 @@ nav ul li a:hover::after {
     transform: translateY(-240px);
   }
 }
-#header a span{
+#header a span {
   display: none;
 }
 
@@ -183,13 +182,13 @@ nav ul li a:hover::after {
 
 .about-me {
   font-size: 1.2rem;
-  color: #FFFAE3 ;
+  color: #fffae3;
   line-height: 130%;
   font-family: 'Oxygen Mono', monospace;
 }
 #about {
   padding: 0 0;
-  color: #FFFAE3;
+  color: #fffae3;
   text-shadow: 0px 0px 1px whitesmoke;
 }
 
@@ -251,7 +250,6 @@ nav ul li a:hover::after {
   color: #fffafa;
 }
 
-
 /*  -------- All css for small screeens below -----------*/
 @media only screen and (max-width: 600px) {
   #header {
@@ -265,10 +263,10 @@ nav ul li a:hover::after {
       url(/images/bg.png);
     background-size: cover;
   }
-  .main_logo{
+  .main_logo {
     padding: 0 0 0 6%;
   }
-  .scroll-down{
+  .scroll-down {
     bottom: 05%;
   }
   #header .wrapper {
@@ -285,7 +283,7 @@ nav ul li a:hover::after {
   .header-text h1 {
     font-size: 38px;
   }
-  .container{
+  .container {
     padding: 3% 0 0 0;
   }
   #sidemenu {
@@ -321,7 +319,7 @@ nav ul li a:hover::after {
   nav .fa-xmark {
     margin-left: 25px;
   }
-  nav .bento__wrapper{
+  nav .bento__wrapper {
     z-index: 9999;
     display: block;
     padding: 0 0 0 55%;
