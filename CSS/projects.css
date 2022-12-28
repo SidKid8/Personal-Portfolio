@@ -9,11 +9,12 @@
 .project-container {
   place-items: center;
   display: grid;
-  grid-gap: 1rem;
-  padding: 1rem;
-  max-width: 1024px;
-  margin: 0 auto;
+  grid-gap: 2em;
+  padding: 1.9em 1.25em;
+  max-width: 100vw;
+  
   font-family: var(--font-sans);
+  background: radial-gradient(ellipse at 50% 125%,#10519b, #1c2e42, #080808);
 }
 
 @media (min-width: 600px) {
@@ -23,7 +24,7 @@
 }
 @media (min-width: 800px) {
   .project-container {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -43,7 +44,8 @@
 }
 @media (min-width: 600px) {
   .card {
-    height: 350px;
+    max-height: 100%;
+    height: 470px;
   }
 }
 .card:before {
@@ -90,17 +92,27 @@
   transition: transform calc(var(--d) * 2) var(--e);
 }
 .card:nth-child(1):before {
-  background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/images/projects/Proj-1.webp');
+  background-size: 100% 100%;
 }
 .card:nth-child(2):before {
-  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/images/projects/Proj-2.webp');
 }
 .card:nth-child(3):before {
-  background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/images/projects/Proj-3.webp');
+  background-size: 100% 100%;
 }
 .card:nth-child(4):before {
-  background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/images/projects/Proj-4.webp');
+  background-size: 100% 100%;
 }
+.card:nth-child(5):before {
+  background-image: url('/images/projects/Proj-5.webp');
+}
+.card:nth-child(6):before {
+  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+
 
 .content {
   position: relative;
@@ -117,16 +129,16 @@
 }
 
 .project-title {
-  font-size: 1.3rem;
+  
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 0;
 }
 
 .copy {
   font-family: var(--font-serif);
   font-size: 1.125rem;
   font-style: italic;
-  line-height: 1.35;
+  line-height: 1.75;
 }
 
 .btn {
