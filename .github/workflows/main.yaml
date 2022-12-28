@@ -1,9 +1,9 @@
-name: Pre SAM DEV
+name: 99% Done Formatting
 
 on:
   push:
     branches:
-    - resu-dev
+    - 0
 
 
 jobs:

@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="'en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/style.css" />
 
-    <!-- !Google fonts Links -->
+    <title>Sidney Wilson's Cloud Resume Challenge</title>
+    <!-- Font Aweseome Icons -->
+    <script 
+      src="https://kit.fontawesome.com/1bbcfc5787.js"
+      crossorigin="anonymous"></script>
+    <script src="./JS/main.JS" type="module"></script>
+
+    <!-- Google fonts Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Oxygen+Mono&family=Special+Elite&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
 
-    <title>Sidney Wilson's Cloud Resume Challenge</title>
-    <link rel="stylesheet" href="/CSS/style.css" />
-    <script
-      src="https://kit.fontawesome.com/1bbcfc5787.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./JS/main.JS" type="module"></script>
 
-    <!-- !Fetch Visitor Api -->
+      <!--  -->
+      
+    <!-- AWS Visitor Api -->
     <script type="text/javascript">
       var apiUrl =
         'https://31jvx8tdp2.execute-api.us-east-1.amazonaws.com/prod/incrementViewcount';
@@ -36,7 +38,6 @@
   </head>
 
   <body>
-    <!-- !Header Div -->
     <div id="header">
       <div class="container">
         <nav>
@@ -44,15 +45,28 @@
             <img src="/images/logo.png" alt="Wilson World Logo" />
           </div>
           <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            <li><a href="#header" aria-label="Home Navigation">Home</a></li>
+            <li><a href="#about" aria-label="About Navigation">About</a></li>
+            <li><a href="#skill_scroll" aria-label="Portfolio Navigation">Portfolio</a></li>
+            <li><a href="#contact" aria-label="Contact Navigation">Contact</a></li>
+            <i class="fa-solid fa-xmark" al="Exit Mobile Nav Menu" onclick="closemenu()"></i>
           </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+          <div class="bento__wrapper" onclick="openmenu()">
+            <div class="menu__item--bento">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+          </div>
         </nav>
-        <!-- !End Cloud Animation Div -->
+
         <div class="header-text">
           <h1>
             Hi, I'm <span id="firstnamecolor">Sidney Wilson</span> the
@@ -65,7 +79,6 @@
                 <li>Discoverer.</li>
               </ul>
             </div>
-            <!-- <span id="secondnamecolor">Wilson</span> -->
           </h1>
         </div>
       </div>
@@ -89,13 +102,6 @@
           <img src="images/cloudpics/cloud2.png" alt="" />
         </div>
 
-        <div class="cloud three">
-          <img src="images/cloudpics/cloud4.png" alt="" />
-        </div>
-        <div class="cloud three">
-          <img src="images/cloudpics/cloud4.png" alt="" />
-        </div>
-
         <div class="cloud four">
           <img src="images/cloudpics/cloud3.png" alt="" />
         </div>
@@ -103,8 +109,15 @@
           <img src="images/cloudpics/cloud3.png" alt="" />
         </div>
       </div>
+        <a href="#about" aria-label="Wheel Scroll to About">
+          <span>
+          Animated Scroller
+          </span>
+            <div class="scroll-down"></div>
+        </a>
     </div>
 
+<main>
     <!-----------About--------->
     <div id="about">
       <div class="container">
@@ -116,14 +129,8 @@
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
             <p class="about-me">
-              Highly organized and versatile computer engineer with 4 years of
-              experience in hardware maintenance and troubleshooting. Adaptable
-              leader with an ability to work independently and with others,
-              creating effective presentations, and developing opportunities
-              that further establish organizational goals. Seeking to bring my
-              skills and experience to a progressive organization with a
-              positive andsupportive culture where I can start and grow a
-              career.
+              A higly oragnized and versatile computer engineer with 6 years of experience in maintaining hardware and troubleshooting. 
+              Sid is an independent, compassionate, and dependable leader curating effective opportunities for his fellow associates and the community.
             </p>
 
             <div class="tab-titles">
@@ -271,10 +278,8 @@
       </div>
     </div>
 
-    <!-- !Skill Icons/Logos -->
-
-    <div id="skill_scroll"></div>
-
+    <!-- Skill Icons/Logos -->
+    <div id="skill_scroll" ></div>
     <script
       src="https://unpkg.com/react@18/umd/react.development.js"
       crossorigin
@@ -286,150 +291,54 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src="/JS/tech-comp.JS" type="text/babel"></script>
 
-    <!-- !New work revolver -->
-    <div class="work-container" id="portfolio">
-      <div class="app">
-        <div class="cardList">
-          <button class="cardList__btn btn btn--left">
-            <div class="icon">
-              <svg>
-                <use xlink:href="#arrow-left"></use>
-              </svg>
-            </div>
-          </button>
-
-          <div class="cards__wrapper">
-            <div class="card current--card">
-              <div class="card__image">
-                <img src="/images/work-1.png" alt="" />
-              </div>
-            </div>
-
-            <div class="card next--card">
-              <div class="card__image">
-                <img src="/images/work-2.png" alt="" />
-              </div>
-            </div>
-
-            <div class="card previous--card">
-              <div class="card__image">
-                <img src="/images/work-3.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <button class="cardList__btn btn btn--right">
-            <div class="icon">
-              <svg>
-                <use xlink:href="#arrow-right"></use>
-              </svg>
-            </div>
-          </button>
-        </div>
-
-        <div class="infoList">
-          <div class="info__wrapper">
-            <div class="info current--info">
-              <h1 class="text name">AWS Architect</h1>
-              <h4 class="text logo">
-                <img src="/images/logos/awslogo.png" />
-              </h4>
-              <p class="text description">
-                "If you spend too much time thinking about a thing, you’ll never
-                get it done." ~ Bruce Lee
-              </p>
-            </div>
-
-            <div class="info next--info">
-              <h1 class="text name">Web Developer</h1>
-              <h4 class="text logo">
-                <img src="/images/logos/csslogo.png" />
-                <img src="/images/logos/jslogo.png" />
-                <img src="/images/logos/html5logo.png" />
-              </h4>
-              <p class="text description">Adventure is never far away</p>
-            </div>
-
-            <div class="info previous--info">
-              <h1 class="text name">Inventory management</h1>
-              <h4 class="text logo">United States</h4>
-              <p class="text description">
-                A good systen shortens the road to the goal.
-              </p>
-            </div>
+    <!-- Projects -->
+      <div class="project-container">
+        <div class="card">
+          <div class="content">
+            <h2 class="project-title">AWS</h2>
+            <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+            <button class="btn">View Project</button>
           </div>
         </div>
-
-        <div class="app__bg">
-          <div class="app__bg__image current--image">
-            <img
-              src="https://source.unsplash.com/Z8dtTatMVMw"
-              alt="AWS Architect Panel"
-            />
+        <div class="card">
+          <div class="content">
+            <h2 class="project-title">Svelte</h2>
+            <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+            <button class="btn">View Project</button>
           </div>
-          <div class="app__bg__image next--image">
-            <img
-              src="https://source.unsplash.com/9dmycbFE7mQ"
-              alt="Web Developer Panel"
-            />
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2 class="project-title">Web Dev</h2>
+            <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+            <button class="btn">View Project</button>
           </div>
-          <div class="app__bg__image previous--image">
-            <img
-              src="https://source.unsplash.com/m7K4KzL5aQ8"
-              alt="Inventory Management"
-            />
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2 class="project-title">JavaScript</h2>
+            <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+            <button class="btn">View Project</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2 class="project-title">Data Migrater</h2>
+            <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+            <button class="btn">View Project</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2 class="project-title">Pipeline Builder</h2>
+            <p class="copy">It's the desert you've always dreamed of</p>
+            <button class="btn">View Project</button>
           </div>
         </div>
       </div>
-
-      <div class="loading__wrapper">
-        <div class="loader--text">Loading...</div>
-        <div class="loader">
-          <span></span>
-        </div>
       </div>
-
-      <svg class="icons" style="display: none">
-        <symbol
-          id="arrow-left"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-        >
-          <polyline
-            points="328 112 184 256 328 400"
-            style="
-              fill: none;
-              stroke: #fff;
-              stroke-linecap: round;
-              stroke-linejoin: round;
-              stroke-width: 48px;
-            "
-          />
-        </symbol>
-        <symbol
-          id="arrow-right"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-        >
-          <polyline
-            points="184 112 328 256 184 400"
-            style="
-              fill: none;
-              stroke: #fff;
-              stroke-linecap: round;
-              stroke-linejoin: round;
-              stroke-width: 48px;
-            "
-          />
-        </symbol>
-      </svg>
-
-      <!-- partial -->
-      <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
-      <script src="./JS/work-revolver.JS"></script>
-    </div>
-    <!-----------contact--------------->
+</main>
+    <!-----------Contact--------------->
     <div id="contact">
       <div class="contactme-container">
         <div class="row">
@@ -441,28 +350,34 @@
             </p>
             <p>
               <i class="fa-solid fa-square-phone"></i>
-              <a href="tel:(+1)708-495-6977">(+1)708-495-6977</a>
+              <a href="tel:(+1)708-719-0225">(+1)708-719-0225</a>
             </p>
 
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/sidney-m-wilson/"
-                ><i class="fa-brands fa-linkedin"></i
+              aria-label="Link To LinkedIn Profile"
+                ><i class="fa-brands fa-linkedin" alt="LinkedIn Logo"></i
               ></a>
 
               <a href="https://github.com/SidKid8/testcode"
-                ><i class="fa-brands fa-github"></i
+              aria-label="Link To Test Code GitHub"
+                ><i class="fa-brands fa-github" alt="GitHub Logo"></i
               ></a>
             </div>
-
-            <a href="images/my-cv.pdf" download class="cv btn2">
-              <span>Click!</span>
-              <span>Download CV</span>
+          <button class="cv btn2">
+            <a href="images/my-cv.pdf" download>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Download CV
             </a>
+          </button>
           </div>
 
           <div class="contact-right">
             <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your Name" required />
+              <input aria-label="NameInput" type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
                 name="Email"
@@ -473,9 +388,16 @@
                 name="Message"
                 rows="6"
                 placeholder="Your Message"
+                required
               ></textarea>
               <button type="submit" class="submit btn2">
-                <span>Submit</span>
+                <a>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Submit
+                </a>
               </button>
             </form>
             <span id="msg"></span>
@@ -525,5 +447,6 @@
         sidemenu.style.right = '-200px';
       }
     </script>
+  
   </body>
 </html>

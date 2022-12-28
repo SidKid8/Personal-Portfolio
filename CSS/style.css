@@ -1,7 +1,10 @@
 @import '/CSS/cloud-rain-light.css';
-@import '/CSS/contact-copyright.css';
-@import '/CSS/work-revolver.css';
+@import '/CSS/contact-copyright copy.css';
+@import '/CSS/projects.css';
 @import '/CSS/tech-comp.css';
+@import '/CSS/bento-box.css';
+@import '/CSS/scroll-anim.css';
+
 /* Full Body */
 * {
   margin: 0;
@@ -19,7 +22,12 @@ body {
 
 /*------------Nav Container----------------*/
 .container {
-  padding: 10px 20px;
+  padding: 10px 5px;
+}
+.main_logo {
+  display: inherit;
+  width: 100px;
+  height: 100px;
 }
 nav {
   display: flex;
@@ -27,15 +35,19 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.main_logo {
-  display: inherit;
-  width: 100px;
-  height: 100px;
+nav ul {
+  background: hsl(0 0% 0% / 0.65);
+}
+@supports (backdrop-filter: blur(1.5rem)) {
+  nav ul {
+    background: hsl(0 0% 0% / 0.1);
+    backdrop-filter: blur(1rem);
+  }
 }
 nav ul li {
   display: inline-block;
   list-style: none;
-  margin: 10px 15px;
+  margin: 10px 20px;
 }
 nav ul li a {
   color: white;
@@ -58,9 +70,11 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
-
+.bento__wrapper {
+  display: none;
+}
 .header-text {
-  margin-top: 33%;
+  margin-top: 28%;
   font-size: 30px;
 }
 .header-text h1 {
@@ -81,7 +95,7 @@ nav ul li a:hover::after {
   flex-direction: column;
   position: relative;
   width: 100vw;
-  height: 955px;
+  height: 900px;
   background-image: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
@@ -109,7 +123,6 @@ nav ul li a:hover::after {
   flex-direction: column;
   justify-content: center;
   font-family: 'Special Elite', cursive;
-
 }
 #header .word-wrap {
   animation: titleflip 8s ease-in-out infinite;
@@ -137,17 +150,16 @@ nav ul li a:hover::after {
     transform: translateY(-240px);
   }
 }
+#header a span {
+  display: none;
+}
 
 /*---------About---------*/
-#about {
-  padding: 0 0;
-  color: #FFFAE3;
-  text-shadow: 0px 0px 1px whitesmoke;
-}
 .row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 2% 0 6.1% 0;
 }
 .about-col-1 {
   flex-basis: 34%;
@@ -169,12 +181,17 @@ nav ul li a:hover::after {
 }
 
 .about-me {
-  font-size: 19px;
-  color: #FFFAE3 ;
+  font-size: 1.2rem;
+  color: #fffae3;
   line-height: 130%;
   font-family: 'Oxygen Mono', monospace;
 }
-/* About Tabs */
+#about {
+  padding: 0 0;
+  color: #fffae3;
+  text-shadow: 0px 0px 1px whitesmoke;
+}
+
 .tab-titles {
   display: flex;
   margin: 23px 0 28px;
@@ -232,43 +249,11 @@ nav ul li a:hover::after {
   font-size: 18px;
   color: #fffafa;
 }
-/*-------Portfolio-----------*/
-#portfolio {
-  padding: 30px 0;
-}
-.work-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 35px;
-  margin-top: 20px;
-  margin-left: 15px;
-}
-.work {
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-.work .first p {
- font-size: 20px;
-}
-.work .second p {
- font-size: 19px;
-}
-.work .third p {
- font-size: 18px;
-}
-.work img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-  transition: transform 0.5s;
-}
 
-
-/* !All css for small screeens below -----------*/
+/*  -------- All css for small screeens below -----------*/
 @media only screen and (max-width: 600px) {
   #header {
-    max-height: 790px;
+    max-height: 780px;
     background-image: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0) 0%,
@@ -278,6 +263,12 @@ nav ul li a:hover::after {
       url(/images/bg.png);
     background-size: cover;
   }
+  .main_logo {
+    padding: 0 0 0 6%;
+  }
+  .scroll-down {
+    bottom: 05%;
+  }
   #header .wrapper {
     display: inline-flex;
     width: max-content;
@@ -286,36 +277,29 @@ nav ul li a:hover::after {
     overflow: hidden;
   }
   .header-text {
-    margin-top: 30%;
+    margin: 45% 0 0 5%;
     font-size: 16px;
   }
   .header-text h1 {
     font-size: 38px;
   }
-  
+  .container {
+    padding: 3% 0 0 0;
+  }
   #sidemenu {
+    padding: 3% 0 0 0;
     right: -200px;
   }
-  nav .fa-solid {
-    display: block;
-    font-size: 30px;
-    padding-right: 3%;
-  }
-  nav .fa-xmark {
-    margin-left: 25px;
-  }
   nav ul {
-    background: #8db9ea;
-    background-image: url("/images/tower.png");
     position: fixed;
     top: 0;
     right: -100px;
     width: 200px;
     height: 100vh;
-    padding-top: 50px;
+    padding: min(30vh, 10rem), 2em;
     z-index: 2;
     transition: right 0.2s;
-    opacity: 90%;
+    opacity: 70%;
   }
   nav ul li {
     display: block;
@@ -326,6 +310,19 @@ nav ul li a:hover::after {
     top: 25px;
     left: 25px;
     cursor: pointer;
+  }
+  nav .fa-solid {
+    display: block;
+    font-size: 30px;
+    padding: 0 8.5% 0 0;
+  }
+  nav .fa-xmark {
+    margin-left: 25px;
+  }
+  nav .bento__wrapper {
+    z-index: 9999;
+    display: block;
+    padding: 0 0 0 55%;
   }
   .sub-title {
     font-size: 40px;

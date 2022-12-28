@@ -1,0 +1,43 @@
+.box {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  margin: 3px 3px;
+  display: inline-block;
+}
+.bento__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0.5;
+}
+.bento__wrapper > div {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.bento__wrapper > div:hover, .bento__wrapper > div:focus {
+  outline: none;
+}
+.bento__wrapper > span {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2;
+  padding: 20px;
+  margin-top: auto;
+}
+.menu__item--bento:hover .box:nth-child(2),
+.menu__item--bento:hover .box:nth-child(4),
+.menu__item--bento:hover .box:nth-child(6),
+.menu__item--bento:hover .box:nth-child(8), .menu__item--bento:focus .box:nth-child(2),
+.menu__item--bento:focus .box:nth-child(4),
+.menu__item--bento:focus .box:nth-child(6),
+.menu__item--bento:focus .box:nth-child(8) {
+  opacity: 0;
+}
