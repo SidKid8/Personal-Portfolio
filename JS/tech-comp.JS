@@ -20,7 +20,8 @@ const TAGS = [
   'Figma',
   'UI/UX',
   'Markdown',
-  'SVG'
+  'SVG',
+  'Tailwind'
 ];
 const DURATION = 50000;
 const ROWS = 5;

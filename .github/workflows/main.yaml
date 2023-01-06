@@ -3,7 +3,7 @@ name: 99% Done Formatting
 on:
   push:
     branches:
-    - 0
+    - branch
 
 
 jobs:

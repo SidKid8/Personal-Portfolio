@@ -9,7 +9,7 @@
 .project-container {
   place-items: center;
   display: grid;
-  grid-gap: 2em;
+  grid-gap: 1em;
   padding: 1.9em 1.25em;
   max-width: 100vw;
   
@@ -24,7 +24,7 @@
 }
 @media (min-width: 800px) {
   .project-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -106,12 +106,7 @@
   background-image: url('/images/projects/Proj-4.webp');
   background-size: 100% 100%;
 }
-.card:nth-child(5):before {
-  background-image: url('/images/projects/Proj-5.webp');
-}
-.card:nth-child(6):before {
-  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-}
+
 
 
 .content {

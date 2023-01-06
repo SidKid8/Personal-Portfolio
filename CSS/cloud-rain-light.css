@@ -8,26 +8,26 @@
   top: 0;
 }
 .cloud.one {
-  top: -155%;
+  top: -185%;
   left: 0;
   position: absolute;
   display: inherit;
   max-width: 1200px;
   max-height: 984px;
   background-size: cover;
-  animation: zoomies 15s infinite linear;
+  animation: zoomies 85s infinite linear;
   transition-timing-function: ease-in-out;
   opacity: 70%;
   overflow: visible;
 }
 .cloud.two {
-  top: -180%;
+  top: -190%;
   max-width: 100%;
   max-height: 975px;
   display: inherit;
   position: absolute;
   background-size: cover;
-  animation: zoomies 160s infinite linear;
+  animation: zoomies 80s infinite linear;
   transition-timing-function: ease-in-out;
   opacity: 75%;
 }
@@ -40,10 +40,9 @@
   display: inherit;
   position: absolute;
   background-size: cover;
-  animation: zoomies 165s infinite linear;
+  animation: zoomies 90s infinite linear;
   transition-timing-function: ease-in-out;
   opacity: 70%;
-  
 }
 @keyframes zoomies {
   from {
