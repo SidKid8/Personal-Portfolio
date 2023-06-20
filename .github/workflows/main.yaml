@@ -3,7 +3,7 @@ name: Been a while update
 on:
   push:
     branches:
-    - master
+    - resu-dev
 
 jobs:
 # Deployment for root domain.
