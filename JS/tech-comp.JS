@@ -20,11 +20,14 @@ const TAGS = [
   'Figma',
   'UI/UX',
   'Markdown',
-  'SVG'
+  'SVG',
+  'Tailwind',
+  'Python',
+  'GA4'
 ];
-const DURATION = 50000;
+const DURATION = 100000;
 const ROWS = 5;
-const TAGS_PER_ROW = 25;
+const TAGS_PER_ROW = 100;
 
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
