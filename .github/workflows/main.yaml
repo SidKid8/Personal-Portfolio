@@ -1,10 +1,9 @@
-name: 99% Done Formatting
+name: Been a while update
 
 on:
   push:
     branches:
-    - branch
-
+    - Master
 
 jobs:
 # Deployment for root domain.
