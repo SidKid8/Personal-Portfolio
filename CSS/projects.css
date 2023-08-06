@@ -12,7 +12,7 @@
   grid-gap: 1em;
   padding: 1.9em 1.25em;
   max-width: 100vw;
-  
+    
   font-family: var(--font-sans);
   background: radial-gradient(ellipse at 50% 125%,#10519b, #1c2e42, #080808);
 }
@@ -24,7 +24,7 @@
 }
 @media (min-width: 800px) {
   .project-container {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -34,7 +34,7 @@
   align-items: flex-end;
   overflow: hidden;
   padding: 1rem;
-  width: 100%;
+  width: 85%;
   text-align: center;
   color: whitesmoke;
   background-color: whitesmoke;
@@ -45,7 +45,7 @@
 @media (min-width: 600px) {
   .card {
     max-height: 100%;
-    height: 470px;
+    height: 500px;
   }
 }
 .card:before {
@@ -92,14 +92,14 @@
   transition: transform calc(var(--d) * 2) var(--e);
 }
 .card:nth-child(1):before {
-  background-image: url('/images/projects/Proj-1.webp');
+  background-image: url('/images/projects/Proj-4.webp');
   background-size: 100% 100%;
 }
 .card:nth-child(2):before {
-  background-image: url('/images/projects/Proj-2.webp');
+  background-image: url('/images/projects/Proj-1.webp');
 }
 .card:nth-child(3):before {
-  background-image: url('/images/projects/Proj-3.webp');
+  background-image: url('/images/projects/Proj-2.webp');
   background-size: 100% 100%;
 }
 .card:nth-child(4):before {
@@ -124,12 +124,14 @@
 }
 
 .project-title {
-  
   font-weight: bold;
   line-height: 0;
+
 }
 
 .copy {
+  margin-top: 10%;
+  margin-bottom: 5%;
   font-family: var(--font-serif);
   font-size: 1.125rem;
   font-style: italic;
@@ -156,6 +158,11 @@
   outline-offset: 3px;
 }
 
+.btn a {
+  color: white;
+  font-size: 12px;
+}
+
 @media (hover: hover) and (min-width: 600px) {
   .card:after {
     transform: translateY(0);
@@ -163,6 +170,8 @@
 
   .content {
     transform: translateY(calc(100% - 4.5rem));
+    font-size: 20px;
+    margin-bottom: 15%;
   }
   .content > *:not(.project-title) {
     opacity: 0;
