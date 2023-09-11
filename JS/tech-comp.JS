@@ -23,8 +23,11 @@ const TAGS = [
   'SVG',
   'Tailwind',
   'Python',
-  'GA4'
+  'GA4',
+  'Terraform',
+  'Liquid'
 ];
+
 const DURATION = 100000;
 const ROWS = 5;
 const TAGS_PER_ROW = 100;
